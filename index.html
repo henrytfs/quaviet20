@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nền tảng Quà tặng & Vinh danh Quà Việt</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Trang chủ Quà Việt">
+        <span class="brand-mark">Q</span>
+        <span>Quà Việt</span>
+      </a>
+      <nav class="nav-links" aria-label="Điều hướng chính">
+        <a href="gioi-thieu.html">Giới thiệu</a>
+        <a href="#products">Sản phẩm</a>
+        <a href="#personalize">Cá nhân hóa</a>
+        <a href="nang-luc.html">Năng lực</a>
+        <a href="du-an.html">Dự án</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="button button-ghost" type="button">Đăng nhập</button>
+        <button class="button button-primary start-program" type="button">Tạo chương trình</button>
+      </div>
+      <button class="menu-button" type="button" aria-label="Mở menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero-section">
+        <div class="hero-copy">
+          <div class="brand-line">
+            <span>Quà Việt Platform</span>
+            <strong>Vinh danh tích cực, cá nhân hóa theo thương hiệu</strong>
+          </div>
+          <h1>Tạo chương trình vinh danh đáng nhớ</h1>
+          <p>
+            Lên kế hoạch quà tặng, cá nhân hóa kỷ vật, duyệt thiết kế và quản lý
+            từng người nhận trên cùng một nền tảng.
+          </p>
+          <div class="hero-actions">
+            <button class="button button-primary start-program" type="button">Tạo chương trình</button>
+            <button class="button button-outline personalize-jump" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8" />
+                <path d="M2 7h20v5H2z" />
+                <path d="M12 22V7" />
+                <path d="M12 7H7.5a2.5 2.5 0 1 1 2-4c.9 1.2 2.5 4 2.5 4Z" />
+                <path d="M12 7h4.5a2.5 2.5 0 1 0-2-4c-.9 1.2-2.5 4-2.5 4Z" />
+              </svg>
+              Cá nhân hóa quà tặng
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-product" aria-label="Cúp vinh danh và giftset Quà Việt">
+          <img src="assets/quaviet-recognition-award.png" alt="Cúp vinh danh, hộp quà và bảng tên Quà Việt" />
+        </div>
+
+        <form class="program-card" id="program-form">
+          <h2>Thiết lập chương trình</h2>
+          <label>
+            <span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
+              Dịp vinh danh
+            </span>
+            <select id="occasion">
+              <option>Vinh danh nhân viên 2026</option>
+              <option>Tri ân đối tác chiến lược</option>
+              <option>Lễ vinh danh kinh doanh xuất sắc</option>
+              <option>Giải thưởng sự kiện thể thao</option>
+            </select>
+          </label>
+          <label>
+            <span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              Người nhận
+            </span>
+            <input id="recipients" type="number" min="1" value="120" />
+          </label>
+          <label>
+            <span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+                <path d="M12 6v12" />
+              </svg>
+              Ngân sách
+            </span>
+            <input id="budget" type="text" value="250,000,000 VND" />
+          </label>
+          <label>
+            <span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
+              Ngày cần giao
+            </span>
+            <input id="delivery" type="date" value="2026-09-30" />
+          </label>
+          <button class="button button-primary full-width" type="submit">
+            Tiếp tục cá nhân hóa
+          </button>
+        </form>
+      </section>
+
+      <section class="product-browser" id="products">
+        <div class="product-browser-header">
+          <div>
+            <h2>Duyệt sản phẩm, xem giá và đưa vào chương trình</h2>
+            <p>
+              Chọn nhanh theo mục đích vinh danh, ngân sách và số lượng. Mỗi sản phẩm
+              đều có thể chuyển thẳng sang cá nhân hóa hoặc yêu cầu báo giá số lượng lớn.
+            </p>
+          </div>
+          <div class="brand-cta-panel">
+            <strong>Quà Việt tư vấn trọn gói</strong>
+            <span>Thiết kế mẫu, khắc in, hộp quà, giao hàng và chứng từ cho doanh nghiệp.</span>
+            <button class="button button-primary quote-trigger" type="button">Nhận tư vấn & báo giá</button>
+          </div>
+        </div>
+
+        <div class="catalog-guide">
+          <div class="guide-copy">
+            <span>Chưa biết nên chọn gì?</span>
+            <h3>Để Quà Việt gợi ý sản phẩm phù hợp</h3>
+            <p>
+              Chọn mục đích, ngân sách và số lượng. Hệ thống sẽ đề xuất nhóm sản phẩm
+              nên xem trước, kèm lý do chọn và bước tiếp theo.
+            </p>
+          </div>
+          <form class="guide-form" id="guide-form">
+            <label>
+              <span>Mục đích mua</span>
+              <select id="guide-occasion">
+                <option value="employee">Vinh danh nhân viên</option>
+                <option value="partner">Tri ân đối tác / khách hàng</option>
+                <option value="event">Sự kiện, hội nghị, giải đấu</option>
+                <option value="milestone">Thâm niên / cột mốc cá nhân</option>
+                <option value="tet">Quà Tặng Tết</option>
+              </select>
+            </label>
+            <label>
+              <span>Ngân sách / người</span>
+              <select id="guide-budget">
+                <option value="standard">Dưới 500.000 VND</option>
+                <option value="premium" selected>500.000 - 1.500.000 VND</option>
+                <option value="signature">Trên 1.500.000 VND</option>
+              </select>
+            </label>
+            <label>
+              <span>Số lượng</span>
+              <select id="guide-volume">
+                <option value="small">Dưới 50</option>
+                <option value="medium" selected>50 - 300</option>
+                <option value="large">300+</option>
+              </select>
+            </label>
+            <button class="button button-primary" id="recommend-button" type="button">Gợi ý sản phẩm</button>
+          </form>
+          <aside class="recommendation-panel" id="recommendation-panel">
+            <span>Gợi ý hiện tại</span>
+            <strong id="recommend-title">Cúp sao pha lê Milano + bảng tên cá nhân hóa</strong>
+            <p id="recommend-reason">
+              Phù hợp chương trình vinh danh nhân viên: trang trọng, dễ khắc tên,
+              kiểm soát chi phí theo số lượng và dùng tốt trong lễ trao giải.
+            </p>
+            <div class="recommend-actions">
+              <button class="button button-outline" id="view-recommendation" type="button">Xem nhóm sản phẩm</button>
+              <button class="button button-primary quote-trigger" type="button">Nhận tư vấn mẫu này</button>
+            </div>
+          </aside>
+        </div>
+
+        <div class="catalog-strip" aria-label="Cách xem catalogue">
+          <article>
+            <strong>1. Chọn theo dịp</strong>
+            <span>Nhân viên, đối tác, sự kiện, thể thao, giáo dục.</span>
+          </article>
+          <article>
+            <strong>2. So sánh giá</strong>
+            <span>Xem khoảng giá, MOQ, khả năng cá nhân hóa.</span>
+          </article>
+          <article>
+            <strong>3. Lưu shortlist</strong>
+            <span>Đưa sản phẩm vào chương trình để duyệt và báo giá.</span>
+          </article>
+        </div>
+
+        <div class="catalog-search-row">
+          <label class="catalog-search">
+            <span>Tìm trong catalogue Quà Việt</span>
+            <input id="catalog-search" type="search" placeholder="Tìm trophy, huy chương, giftset, quà Tết..." />
+          </label>
+          <button class="button button-ghost" id="toggle-advanced" type="button" aria-expanded="false">
+            Bộ lọc nâng cao
+          </button>
+        </div>
+
+        <div class="collection-rail" aria-label="Bộ sưu tập được chọn lọc">
+          <button class="collection-button active" type="button" data-collection="all">
+            <strong>Khám phá tất cả</strong><span>7 dòng sản phẩm tiêu biểu</span>
+          </button>
+          <button class="collection-button" type="button" data-collection="bestseller">
+            <strong>Bán chạy</strong><span>Dễ chọn, phù hợp nhiều chương trình</span>
+          </button>
+          <button class="collection-button" type="button" data-collection="fast">
+            <strong>Giao nhanh</strong><span>Có phương án từ 5–12 ngày</span>
+          </button>
+          <button class="collection-button" type="button" data-collection="premium">
+            <strong>Cao cấp</strong><span>Vinh danh và tri ân VIP</span>
+          </button>
+          <button class="collection-button" type="button" data-collection="personalized">
+            <strong>Cá nhân hóa từng người</strong><span>Tên, danh hiệu và thông điệp riêng</span>
+          </button>
+        </div>
+
+        <div class="catalog-toolbar" aria-label="Danh mục sản phẩm">
+          <button class="filter-button active" type="button" data-filter="all">Tất cả <small>7</small></button>
+          <button class="filter-button" type="button" data-filter="trophy">Trophy</button>
+          <button class="filter-button" type="button" data-filter="award">Award</button>
+          <button class="filter-button" type="button" data-filter="plaques">Plaque</button>
+          <button class="filter-button" type="button" data-filter="medals">Huy chương</button>
+          <button class="filter-button" type="button" data-filter="custom">Custom Branded</button>
+          <button class="filter-button" type="button" data-filter="giftsets">Corporate Giftset</button>
+          <button class="filter-button" type="button" data-filter="tet">Quà Tặng Tết</button>
+        </div>
+
+        <div class="product-layout">
+          <aside class="pricing-sidebar" id="advanced-filters">
+            <div class="filter-sidebar-heading">
+              <div><span>Lọc nhanh</span><h3>Thu hẹp lựa chọn</h3></div>
+              <button id="reset-filters" type="button">Xóa lọc</button>
+            </div>
+            <label>
+              <span>Số lượng dự kiến</span>
+              <select id="volume-select">
+                <option value="50">50 người nhận</option>
+                <option value="120" selected>120 người nhận</option>
+                <option value="300">300 người nhận</option>
+                <option value="1000">1.000+ người nhận</option>
+              </select>
+            </label>
+            <label>
+              <span>Ngân sách / sản phẩm</span>
+              <select id="price-filter">
+                <option value="all">Tất cả ngân sách</option>
+                <option value="under500">Dưới 500.000 VND</option>
+                <option value="500to1500">500.000 - 1.500.000 VND</option>
+                <option value="over1500">Trên 1.500.000 VND</option>
+              </select>
+            </label>
+            <label>
+              <span>Thời gian cần hàng</span>
+              <select id="timeline-filter">
+                <option value="all">Chưa xác định</option>
+                <option value="fast">Trong 12 ngày</option>
+                <option value="standard">Trong 3 tuần</option>
+                <option value="custom">Thiết kế riêng 3–6 tuần</option>
+              </select>
+            </label>
+            <label class="filter-check">
+              <input id="personalization-filter" type="checkbox" />
+              <span>Cá nhân hóa từng người nhận</span>
+            </label>
+            <div class="price-bands">
+              <div>
+                <strong>Phổ thông</strong>
+                <span>180.000 - 450.000 VND / món</span>
+              </div>
+              <div>
+                <strong>Cao cấp</strong>
+                <span>650.000 - 1.800.000 VND / món</span>
+              </div>
+              <div>
+                <strong>Dự án riêng</strong>
+                <span>Báo giá theo mẫu, logo, bao bì và tiến độ</span>
+              </div>
+            </div>
+            <button class="button button-outline full-width quote-trigger" type="button">
+              Gửi brief để báo giá
+            </button>
+          </aside>
+
+          <div class="catalog-results">
+            <div class="results-heading">
+              <div>
+                <span id="results-context">Catalogue Quà Việt</span>
+                <h3><strong id="results-count">7</strong> sản phẩm phù hợp</h3>
+              </div>
+              <span>Hiển thị sản phẩm tiêu biểu theo dòng; màu sắc và kích thước nằm trong trang chi tiết.</span>
+            </div>
+            <div class="product-grid" id="product-grid">
+            <article class="product-card" data-category="trophy" data-product="Trophy Cup Kim Loại">
+              <img src="assets/product-trophy.png" alt="Trophy cup kim loại Quà Việt" />
+              <div class="product-card-body">
+                <div data-label="Trophy">
+                  <h3>Trophy Cup Kim Loại</h3>
+                  <p>Trao giải thể thao, sales champion, đại hội đại lý và sự kiện thi đua.</p>
+                </div>
+                <dl>
+                  <div><dt>Giá tham khảo</dt><dd>650.000 - 2.800.000 VND</dd></div>
+                  <div><dt>MOQ</dt><dd>10+</dd></div>
+                  <div><dt>Cá nhân hóa</dt><dd>Bảng tên, logo, hạng mục, đế cúp</dd></div>
+                </dl>
+                <div class="product-actions">
+                  <button class="button button-outline detail-product" type="button">Xem chi tiết</button>
+                  <button class="button button-primary personalize-product" type="button">Cá nhân hóa</button>
+                  <button class="button button-ghost quote-product" type="button">Báo giá</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="award" data-product="Award Pha Lê Milano">
+              <img src="assets/quaviet-recognition-award.png" alt="Award pha lê Milano Quà Việt" />
+              <div class="product-card-body">
+                <div data-label="Award">
+                  <h3>Award Pha Lê Milano</h3>
+                  <p>Vinh danh nhân viên xuất sắc, lãnh đạo dự án, đại lý tiêu biểu.</p>
+                </div>
+                <dl>
+                  <div><dt>Giá tham khảo</dt><dd>890.000 - 1.650.000 VND</dd></div>
+                  <div><dt>MOQ</dt><dd>10+</dd></div>
+                  <div><dt>Cá nhân hóa</dt><dd>Logo, tên, danh hiệu, hộp</dd></div>
+                </dl>
+                <div class="product-actions">
+                  <button class="button button-outline detail-product" type="button">Xem chi tiết</button>
+                  <button class="button button-primary personalize-product" type="button">Cá nhân hóa</button>
+                  <button class="button button-ghost quote-product" type="button">Báo giá</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="plaques" data-product="Bảng vinh danh thâm niên">
+              <img src="assets/quaviet-recognition-award.png" alt="Bảng vinh danh thâm niên Quà Việt" />
+              <div class="product-card-body">
+                <div data-label="Plaque">
+                  <h3>Bảng vinh danh thâm niên</h3>
+                  <p>Ghi nhận 5 năm, 10 năm, 20 năm với chất liệu kim loại, gỗ hoặc pha lê.</p>
+                </div>
+                <dl>
+                  <div><dt>Giá tham khảo</dt><dd>320.000 - 980.000 VND</dd></div>
+                  <div><dt>MOQ</dt><dd>20+</dd></div>
+                  <div><dt>Cá nhân hóa</dt><dd>Tên, mốc năm, phòng ban, lời tri ân</dd></div>
+                </dl>
+                <div class="product-actions">
+                  <button class="button button-outline detail-product" type="button">Xem chi tiết</button>
+                  <button class="button button-primary personalize-product" type="button">Cá nhân hóa</button>
+                  <button class="button button-ghost quote-product" type="button">Báo giá</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="medals" data-product="Huy chương giải đấu">
+              <img src="assets/product-medals.png" alt="Huy chương giải đấu Quà Việt" />
+              <div class="product-card-body">
+                <div data-label="Medal">
+                  <h3>Huy chương giải đấu</h3>
+                  <p>Bộ vàng, bạc, đồng cho thể thao, giáo dục, nội bộ doanh nghiệp.</p>
+                </div>
+                <dl>
+                  <div><dt>Giá tham khảo</dt><dd>75.000 - 260.000 VND</dd></div>
+                  <div><dt>MOQ</dt><dd>100+</dd></div>
+                  <div><dt>Cá nhân hóa</dt><dd>Logo, dây đeo, môn thi, năm tổ chức</dd></div>
+                </dl>
+                <div class="product-actions">
+                  <button class="button button-outline detail-product" type="button">Xem chi tiết</button>
+                  <button class="button button-primary personalize-product" type="button">Cá nhân hóa</button>
+                  <button class="button button-ghost quote-product" type="button">Báo giá</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="custom" data-product="Custom Branded Trophy/Award">
+              <img src="assets/quaviet-recognition-award.png" alt="Custom branded trophy award Quà Việt" />
+              <div class="product-card-body">
+                <div data-label="Custom Branded">
+                  <h3>Custom Branded Trophy/Award</h3>
+                  <p>Thiết kế riêng theo nhận diện thương hiệu, sự kiện hoặc câu chuyện vinh danh.</p>
+                </div>
+                <dl>
+                  <div><dt>Giá tham khảo</dt><dd>Báo giá theo mẫu</dd></div>
+                  <div><dt>MOQ</dt><dd>30+</dd></div>
+                  <div><dt>Cá nhân hóa</dt><dd>Form dáng, logo, vật liệu, hộp, thông điệp</dd></div>
+                </dl>
+                <div class="product-actions">
+                  <button class="button button-outline detail-product" type="button">Xem chi tiết</button>
+                  <button class="button button-primary personalize-product" type="button">Cá nhân hóa</button>
+                  <button class="button button-ghost quote-product" type="button">Báo giá</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="giftsets" data-product="Corporate Giftset">
+              <img src="assets/product-tet-giftset.png" alt="Corporate giftset Quà Việt" />
+              <div class="product-card-body">
+                <div data-label="Corporate Giftset">
+                  <h3>Corporate Giftset</h3>
+                  <p>Hộp quà doanh nghiệp cho khách hàng VIP, đối tác, nhân viên và sự kiện nội bộ.</p>
+                </div>
+                <dl>
+                  <div><dt>Giá tham khảo</dt><dd>450.000 - 1.200.000 VND</dd></div>
+                  <div><dt>MOQ</dt><dd>50+</dd></div>
+                  <div><dt>Cá nhân hóa</dt><dd>Logo, sleeve, thiệp, thông điệp, người nhận</dd></div>
+                </dl>
+                <div class="product-actions">
+                  <button class="button button-outline detail-product" type="button">Xem chi tiết</button>
+                  <button class="button button-primary personalize-product" type="button">Cá nhân hóa</button>
+                  <button class="button button-ghost quote-product" type="button">Báo giá</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="tet" data-product="Quà Tặng Tết Doanh Nghiệp">
+              <img src="assets/product-tet-giftset.png" alt="Quà Tặng Tết doanh nghiệp Quà Việt" />
+              <div class="product-card-body">
+                <div data-label="Quà Tặng Tết">
+                  <h3>Quà Tặng Tết Doanh Nghiệp</h3>
+                  <p>Giftset Tết đỏ-vàng, bao bì thương hiệu, thiệp chúc Tết và giao hàng theo danh sách.</p>
+                </div>
+                <dl>
+                  <div><dt>Giá tham khảo</dt><dd>350.000 - 1.500.000 VND</dd></div>
+                  <div><dt>MOQ</dt><dd>100+</dd></div>
+                  <div><dt>Cá nhân hóa</dt><dd>Hộp, túi, thiệp, sleeve, lời chúc, phân tuyến giao</dd></div>
+                </dl>
+                <div class="product-actions">
+                  <button class="button button-outline detail-product" type="button">Xem chi tiết</button>
+                  <button class="button button-primary personalize-product" type="button">Cá nhân hóa</button>
+                  <button class="button button-ghost quote-product" type="button">Báo giá</button>
+                </div>
+              </div>
+            </article>
+            </div>
+            <div class="empty-results" id="empty-results" hidden>
+              <strong>Chưa có sản phẩm khớp tất cả điều kiện</strong>
+              <span>Hãy xóa bớt bộ lọc hoặc để chuyên viên Quà Việt đề xuất phương án thay thế.</span>
+              <button class="button button-primary quote-trigger" type="button">Nhận tư vấn chọn sản phẩm</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="shortlist-tray" id="shortlist-tray" aria-live="polite" hidden>
+        <div>
+          <strong><span id="shortlist-count">0</span> sản phẩm trong danh sách quan tâm</strong>
+          <span id="shortlist-summary">Chọn sản phẩm để so sánh và nhận báo giá chung.</span>
+        </div>
+        <div class="shortlist-actions">
+          <button class="button button-ghost" id="compare-shortlist" type="button">So sánh</button>
+          <button class="button button-primary" id="quote-shortlist" type="button">Nhận báo giá danh sách</button>
+        </div>
+      </aside>
+
+      <section class="personalization-section" id="personalize">
+        <div class="section-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4M12 8h.01" />
+          </svg>
+          <h2>Cá nhân hóa Quà Việt</h2>
+        </div>
+
+        <div class="personalization-grid">
+          <form class="personalization-form" id="personalization-form">
+            <label>
+              <span>Logo</span>
+              <button class="upload-box" type="button" id="logo-button">
+                <span class="shield-mark">◇</span>
+                <strong id="logo-name">VIETCOMBANK</strong>
+                <small>Đổi</small>
+              </button>
+            </label>
+            <label>
+              <span>Tên người nhận</span>
+              <input id="recipient-name" type="text" value="Nguyễn Minh Anh" />
+            </label>
+            <label>
+              <span>Thông điệp</span>
+              <textarea id="message">Vì tinh thần lãnh đạo nổi bật và sự cống hiến bền bỉ</textarea>
+            </label>
+            <label>
+              <span>Chất liệu</span>
+              <select id="material">
+                <option>Kim loại vàng xước</option>
+                <option>Acrylic trong suốt</option>
+                <option>Pha lê</option>
+                <option>Gỗ óc chó</option>
+              </select>
+            </label>
+            <label>
+              <span>Bao bì</span>
+              <select id="packaging">
+                <option>Hộp quà cao cấp</option>
+                <option>Đai hộp giftset doanh nghiệp</option>
+                <option>Hộp trao giải sự kiện</option>
+              </select>
+            </label>
+            <div class="recipient-import">
+              <button class="button button-outline" id="import-button" type="button">
+                Nhập danh sách người nhận
+              </button>
+              <span id="import-status">Sẵn sàng cá nhân hóa hàng loạt từ CSV hoặc Excel</span>
+            </div>
+          </form>
+
+          <div class="preview-panel">
+            <button class="carousel-button" type="button" aria-label="Xem mẫu trước">‹</button>
+            <div class="award-preview">
+              <img src="assets/quaviet-recognition-award.png" alt="Mẫu xem trước cúp vinh danh cá nhân hóa Quà Việt" />
+              <div class="engraving">
+                <strong>VINH DANH XUẤT SẮC</strong>
+                <span>Trao tặng</span>
+                <b id="preview-name">Nguyễn Minh Anh</b>
+                <small id="preview-message">Vì tinh thần lãnh đạo nổi bật và sự cống hiến bền bỉ</small>
+              </div>
+            </div>
+            <button class="carousel-button" type="button" aria-label="Xem mẫu tiếp theo">›</button>
+            <div class="preview-dots" aria-hidden="true">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <aside class="approval-panel">
+            <div class="approval-heading">
+              <h3>Trạng thái duyệt mẫu</h3>
+              <span id="approval-chip">Chờ duyệt</span>
+            </div>
+            <ol class="timeline" id="timeline">
+              <li class="done">
+                <strong>Đã gửi thiết kế</strong>
+                <span>Bởi Linh Tran · 20/05/2026 10:30</span>
+              </li>
+              <li class="active">
+                <strong>Đang chờ duyệt</strong>
+                <span>Từ đội mua hàng</span>
+              </li>
+              <li>
+                <strong>Đã duyệt</strong>
+                <span>Chưa xác nhận</span>
+              </li>
+              <li>
+                <strong>Khóa để sản xuất</strong>
+                <span>Sau xác nhận cuối</span>
+              </li>
+            </ol>
+            <div class="approval-actions">
+              <button class="button button-ghost" id="changes-button" type="button">
+                Yêu cầu chỉnh sửa
+              </button>
+              <button class="button button-primary" id="approve-button" type="button">
+                Duyệt thiết kế
+              </button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="workspace-section" id="workspace">
+        <div class="workspace-header">
+          <div>
+            <span>Không gian làm việc Quà Việt</span>
+            <h2>Quản lý toàn bộ chương trình vinh danh từ một màn hình</h2>
+            <p>
+              Theo dõi ngân sách, danh sách người nhận, duyệt mẫu, sản xuất,
+              giao hàng và lặp lại các chương trình đã lưu.
+            </p>
+          </div>
+          <div class="workspace-actions">
+            <button class="button button-primary" id="save-program-button" type="button">Lưu chương trình</button>
+            <button class="button button-outline quote-trigger" type="button">Gửi yêu cầu báo giá</button>
+          </div>
+        </div>
+
+        <div class="workspace-tabs" role="tablist" aria-label="Khu vực quản lý nền tảng">
+          <button class="workspace-tab active" type="button" data-panel="dashboard-panel">Tổng quan</button>
+          <button class="workspace-tab" type="button" data-panel="builder-panel">Thiết kế chương trình</button>
+          <button class="workspace-tab" type="button" data-panel="recipients-panel">Người nhận</button>
+          <button class="workspace-tab" type="button" data-panel="approval-panel-workspace">Duyệt & sản xuất</button>
+        </div>
+
+        <div class="workspace-panels">
+          <section class="workspace-panel active" id="dashboard-panel">
+            <div class="metric-row">
+              <article>
+                <span>Ngân sách dự kiến</span>
+                <strong id="metric-budget">250,000,000 VND</strong>
+                <small>Theo 120 người nhận</small>
+              </article>
+              <article>
+                <span>Chi phí / người</span>
+                <strong id="metric-per-recipient">2,083,333 VND</strong>
+                <small>Cập nhật theo số lượng</small>
+              </article>
+              <article>
+                <span>Trạng thái</span>
+                <strong id="metric-status">Đang cá nhân hóa</strong>
+                <small>Chờ duyệt mẫu cuối</small>
+              </article>
+              <article>
+                <span>Ngày giao</span>
+                <strong id="metric-date">30/09/2026</strong>
+                <small>Còn 82 ngày chuẩn bị</small>
+              </article>
+            </div>
+
+            <div class="dashboard-grid">
+              <article class="program-summary">
+                <h3>Chương trình đang mở</h3>
+                <div class="summary-line">
+                  <span>Vinh danh nhân viên 2026</span>
+                  <strong>120 người nhận</strong>
+                </div>
+                <div class="progress-track" aria-hidden="true">
+                  <span style="width: 62%"></span>
+                </div>
+                <ol>
+                  <li class="done">Đã chọn sản phẩm & ngân sách</li>
+                  <li class="done">Đang cá nhân hóa mẫu</li>
+                  <li>Duyệt artwork cuối</li>
+                  <li>Sản xuất & giao hàng</li>
+                </ol>
+              </article>
+
+              <article class="saved-programs">
+                <h3>Chương trình đã lưu</h3>
+                <button type="button" class="saved-program" data-saved="Partner Appreciation 2026">
+                  <strong>Tri ân đối tác 2026</strong>
+                  <span>Giftset · 300 người nhận · Dự toán 360,000,000 VND</span>
+                </button>
+                <button type="button" class="saved-program" data-saved="Sales Awards Q4">
+                  <strong>Sales Awards Q4</strong>
+                  <span>Cúp pha lê · 42 người nhận · Cần duyệt lại logo</span>
+                </button>
+                <button type="button" class="saved-program" data-saved="Sports Day Medals">
+                  <strong>Sports Day Medals</strong>
+                  <span>Huy chương · 800 người nhận · Sẵn sàng đặt lại</span>
+                </button>
+              </article>
+            </div>
+          </section>
+
+          <section class="workspace-panel" id="builder-panel">
+            <div class="builder-grid">
+              <form class="builder-form">
+                <h3>Thiết kế chương trình</h3>
+                <label>
+                  <span>Mục tiêu</span>
+                  <select id="builder-goal">
+                    <option>Vinh danh nhân viên</option>
+                    <option>Tri ân đối tác</option>
+                    <option>Giải thưởng sự kiện</option>
+                    <option>Quà tặng theo mùa</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Cấp ngân sách</span>
+                  <select id="budget-tier">
+                    <option value="450000">Phổ thông · 450.000 VND / người</option>
+                    <option value="1200000" selected>Cao cấp · 1.200.000 VND / người</option>
+                    <option value="2500000">Signature · 2.500.000 VND / người</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Số người nhận</span>
+                  <input id="builder-recipients" type="number" min="1" value="120" />
+                </label>
+                <label>
+                  <span>Dịch vụ đi kèm</span>
+                  <select id="service-level">
+                    <option>Thiết kế + sản xuất</option>
+                    <option selected>Thiết kế + sản xuất + đóng gói</option>
+                    <option>Trọn gói: thiết kế, sản xuất, đóng gói, giao hàng</option>
+                  </select>
+                </label>
+              </form>
+              <aside class="builder-result">
+                <h3>Dự toán tức thời</h3>
+                <strong id="builder-total">144,000,000 VND</strong>
+                <span id="builder-unit">1.200.000 VND / người</span>
+                <p>
+                  Dự toán dùng để định hướng. Báo giá cuối sẽ phụ thuộc mẫu thiết kế,
+                  logo, vật liệu, hộp quà và tiến độ sản xuất.
+                </p>
+                <button class="button button-primary quote-trigger" type="button">Chuyển thành báo giá</button>
+              </aside>
+            </div>
+          </section>
+
+          <section class="workspace-panel" id="recipients-panel">
+            <div class="recipient-toolbar">
+              <div>
+                <h3>Danh sách người nhận</h3>
+                <p>Kiểm tra dữ liệu trước khi khóa sản xuất hàng loạt.</p>
+              </div>
+              <button class="button button-outline" id="validate-recipients" type="button">Kiểm tra dữ liệu</button>
+            </div>
+            <div class="recipient-table" role="table" aria-label="Danh sách người nhận">
+              <div role="row">
+                <strong role="columnheader">Tên</strong>
+                <strong role="columnheader">Phòng ban</strong>
+                <strong role="columnheader">Sản phẩm</strong>
+                <strong role="columnheader">Trạng thái</strong>
+              </div>
+              <div role="row">
+                <span>Nguyễn Minh Anh</span>
+                <span>Kinh doanh</span>
+                <span>Cúp sao pha lê Milano</span>
+                <span class="status-ok">Đủ dữ liệu</span>
+              </div>
+              <div role="row">
+                <span>Trần Hoàng Nam</span>
+                <span>Vận hành</span>
+                <span>Bảng vinh danh thâm niên</span>
+                <span class="status-ok">Đủ dữ liệu</span>
+              </div>
+              <div role="row">
+                <span>Lê Phương Thảo</span>
+                <span>Thiếu phòng ban</span>
+                <span>Giftset tri ân đối tác</span>
+                <span class="status-warn">Cần bổ sung</span>
+              </div>
+              <div role="row">
+                <span>Phạm Quốc Huy</span>
+                <span>Marketing</span>
+                <span>Huy chương giải đấu</span>
+                <span class="status-ok">Đủ dữ liệu</span>
+              </div>
+            </div>
+            <p class="workspace-note" id="recipient-validation-note">Sẵn sàng nhập Excel/CSV và map dữ liệu vào từng mẫu cá nhân hóa.</p>
+          </section>
+
+          <section class="workspace-panel" id="approval-panel-workspace">
+            <div class="approval-board">
+              <article>
+                <h3>Duyệt mẫu</h3>
+                <ul>
+                  <li><strong>Artwork logo</strong><span>Đang chờ đội mua hàng</span></li>
+                  <li><strong>Nội dung khắc</strong><span>Đã kiểm tra chính tả</span></li>
+                  <li><strong>Mẫu hộp</strong><span>Cần xác nhận màu thương hiệu</span></li>
+                </ul>
+              </article>
+              <article>
+                <h3>Sản xuất</h3>
+                <ul>
+                  <li><strong>Khắc laser</strong><span>Dự kiến 3 ngày</span></li>
+                  <li><strong>In hộp quà</strong><span>Dự kiến 5 ngày</span></li>
+                  <li><strong>QC & đóng gói</strong><span>Dự kiến 2 ngày</span></li>
+                </ul>
+              </article>
+              <article>
+                <h3>Giao hàng</h3>
+                <ul>
+                  <li><strong>Hồ Chí Minh</strong><span>80 phần quà</span></li>
+                  <li><strong>Hà Nội</strong><span>30 phần quà</span></li>
+                  <li><strong>Đà Nẵng</strong><span>10 phần quà</span></li>
+                </ul>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="case-production-section" id="cases">
+        <div class="case-column">
+          <span>Dự án mẫu</span>
+          <h2>Từ chương trình vinh danh đến bộ quà trao tặng hoàn chỉnh</h2>
+          <div class="case-list">
+            <article>
+              <strong>Vinh danh nhân viên toàn quốc</strong>
+              <p>120 cúp pha lê cá nhân hóa, hộp quà cao cấp, danh sách người nhận theo chi nhánh.</p>
+              <small>HR · 6 tuần · 3 điểm giao</small>
+            </article>
+            <article>
+              <strong>Tri ân đối tác chiến lược</strong>
+              <p>300 giftset thương hiệu, sleeve in logo, thông điệp riêng cho từng nhóm khách hàng.</p>
+              <small>Procurement · 4 tuần · đóng gói riêng</small>
+            </article>
+            <article>
+              <strong>Giải thể thao doanh nghiệp</strong>
+              <p>800 huy chương, dây đeo theo màu đội, bảng vinh danh và bộ trao giải sân khấu.</p>
+              <small>Event · 2 tuần · giao trước sự kiện</small>
+            </article>
+          </div>
+        </div>
+
+        <div class="production-column" id="production">
+          <span>Năng lực sản xuất</span>
+          <h2>Duyệt mẫu rõ ràng, sản xuất có kiểm soát</h2>
+          <div class="production-steps">
+            <article><strong>01</strong><p>Chuẩn hóa brief, logo, danh sách người nhận và thông điệp.</p></article>
+            <article><strong>02</strong><p>Tạo mockup cá nhân hóa, ghi nhận phản hồi và khóa artwork.</p></article>
+            <article><strong>03</strong><p>Sản xuất, khắc/in, QC, đóng gói và phân tuyến giao hàng.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow" aria-label="Quy trình nền tảng vinh danh">
+        <article>
+          <span>1</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <h3>Khám phá</h3>
+          <p>Tìm ý tưởng và sản phẩm</p>
+        </article>
+        <article>
+          <span>2</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m12 20 9-16-16 9 7 3 3 7Z" />
+          </svg>
+          <h3>Cá nhân hóa</h3>
+          <p>Thêm logo, tên, thông điệp và chi tiết riêng</p>
+        </article>
+        <article>
+          <span>3</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 13c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V5l8-3 8 3v8Z" />
+            <path d="m9 12 2 2 4-4" />
+          </svg>
+          <h3>Duyệt mẫu</h3>
+          <p>Kiểm tra thiết kế và xác nhận nội dung</p>
+        </article>
+        <article>
+          <span>4</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 21h18" />
+            <path d="M5 21V7l8 4V7l6 3v11" />
+            <path d="M9 21v-4h2v4M15 21v-4h2v4" />
+          </svg>
+          <h3>Sản xuất</h3>
+          <p>Chế tác chỉn chu và kiểm soát chất lượng</p>
+        </article>
+        <article>
+          <span>5</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+          </svg>
+          <h3>Quản lý</h3>
+          <p>Theo dõi giao hàng và danh sách người nhận</p>
+        </article>
+      </section>
+
+      <section class="solutions-section" id="solutions">
+        <div>
+          <h2>Giải pháp vinh danh doanh nghiệp cho mọi tổ chức</h2>
+          <p>
+            Chuyển từ đơn hàng catalogue rời rạc sang chương trình có thể lặp lại,
+            lưu bộ nhận diện, lịch sử người nhận và quy trình duyệt sẵn sàng sản xuất.
+          </p>
+        </div>
+        <div class="solution-tiles">
+          <article>
+            <img src="assets/quaviet-recognition-award.png" alt="" />
+            <h3>Cho đội nhân sự</h3>
+            <p>Thâm niên, nhân viên xuất sắc, quà onboarding và vinh danh hàng tháng.</p>
+          </article>
+          <article>
+            <img src="assets/quaviet-recognition-award.png" alt="" />
+            <h3>Cho bộ phận mua hàng</h3>
+            <p>Quà số lượng lớn theo ngân sách, giftset, bao bì thương hiệu và báo giá.</p>
+          </article>
+          <article>
+            <img src="assets/quaviet-recognition-award.png" alt="" />
+            <h3>Cho đơn vị tổ chức sự kiện</h3>
+            <p>Tiến độ sản xuất, điểm duyệt mẫu và sẵn sàng cho ngày trao giải.</p>
+          </article>
+          <article>
+            <img src="assets/quaviet-recognition-award.png" alt="" />
+            <h3>Cho thể thao & giáo dục</h3>
+            <p>Huy chương, cúp, bộ trao giải và khắc tên theo từng người nhận.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="conversion-band">
+        <div>
+          <strong>Quà Việt đồng hành từ ý tưởng đến ngày trao tặng</strong>
+          <p>
+            Gửi brief, danh sách người nhận hoặc ngân sách dự kiến. Đội ngũ Quà Việt
+            sẽ đề xuất sản phẩm, phương án cá nhân hóa và báo giá phù hợp.
+          </p>
+        </div>
+        <div class="conversion-actions">
+          <button class="button button-primary quote-trigger" type="button">Nhận báo giá trong ngày</button>
+          <button class="button button-outline start-program" type="button">Xem sản phẩm & giá</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <strong>Quà Việt</strong>
+      <span>Nền tảng Quà tặng & Vinh danh</span>
+      <a href="gioi-thieu.html">Giới thiệu</a>
+      <a href="nang-luc.html">Năng lực</a>
+      <a href="du-an.html">Dự án</a>
+      <a href="mailto:hello@quaviet.com">hello@quaviet.com</a>
+    </footer>
+
+    <aside class="quote-drawer" id="quote-drawer" aria-hidden="true">
+      <div class="quote-drawer-panel">
+        <button class="drawer-close" id="drawer-close" type="button" aria-label="Đóng báo giá">×</button>
+        <span>Brief báo giá Quà Việt</span>
+        <h2>Gửi yêu cầu để đội ngũ tư vấn phương án phù hợp</h2>
+        <form class="quote-form">
+          <label>
+            <span>Loại chương trình</span>
+            <select id="quote-type">
+              <option>Vinh danh nhân viên</option>
+              <option>Tri ân đối tác</option>
+              <option>Sự kiện / giải đấu</option>
+              <option>Giftset theo mùa</option>
+            </select>
+          </label>
+          <label>
+            <span>Ngân sách dự kiến</span>
+            <input id="quote-budget" type="text" value="250,000,000 VND" />
+          </label>
+          <label>
+            <span>Ghi chú</span>
+            <textarea id="quote-note">Cần tư vấn sản phẩm, cá nhân hóa logo và báo giá theo số lượng.</textarea>
+          </label>
+          <button class="button button-primary full-width" id="send-quote" type="button">Tạo brief báo giá</button>
+        </form>
+      </div>
+    </aside>
+
+    <aside class="product-detail-drawer" id="product-detail-drawer" aria-hidden="true">
+      <div class="product-detail-panel">
+        <button class="drawer-close" id="product-detail-close" type="button" aria-label="Đóng chi tiết sản phẩm">×</button>
+        <div class="detail-hero">
+          <img id="detail-image" src="assets/quaviet-recognition-award.png" alt="Chi tiết sản phẩm Quà Việt" />
+          <div>
+            <span id="detail-category">Cúp & biểu trưng</span>
+            <h2 id="detail-title">Cúp sao pha lê Milano</h2>
+            <p id="detail-summary">Vinh danh nhân viên xuất sắc, lãnh đạo dự án, đại lý tiêu biểu.</p>
+            <div class="detail-cta-row">
+              <button class="button button-primary" id="detail-quote" type="button">Nhận báo giá sản phẩm này</button>
+              <button class="button button-outline" id="detail-personalize" type="button">Cá nhân hóa ngay</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-grid">
+          <section>
+            <h3>Vì sao nên chọn</h3>
+            <ul id="detail-reasons"></ul>
+          </section>
+          <section>
+            <h3>Thông số & giá</h3>
+            <dl class="detail-specs">
+              <div><dt>Giá tham khảo</dt><dd id="detail-price">890.000 - 1.650.000 VND</dd></div>
+              <div><dt>MOQ</dt><dd id="detail-moq">10+</dd></div>
+              <div><dt>Thời gian</dt><dd id="detail-timeline">7 - 14 ngày</dd></div>
+              <div><dt>Phù hợp</dt><dd id="detail-fit">Vinh danh nhân viên, đại lý, lãnh đạo dự án</dd></div>
+            </dl>
+          </section>
+          <section>
+            <h3>Cá nhân hóa được</h3>
+            <ul id="detail-personalization"></ul>
+          </section>
+          <section class="detail-sales-card">
+            <h3>Muốn chắc chắn trước khi đặt?</h3>
+            <p>
+              Quà Việt có thể tư vấn mẫu theo ngân sách, gửi mockup logo và báo giá
+              theo số lượng trước khi sản xuất.
+            </p>
+            <button class="button button-primary full-width" id="detail-advisor" type="button">Nói chuyện với tư vấn</button>
+          </section>
+        </div>
+      </div>
+    </aside>
+
+    <script src="app.js"></script>
+  </body>
+</html>
