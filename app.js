@@ -102,7 +102,16 @@ const productDiscovery = {
   "Huy chương giải đấu": { price: "under500", timeline: "fast", collections: ["fast"] },
   "Custom Branded Trophy/Award": { price: "over1500", timeline: "custom", collections: ["premium", "personalized"] },
   "Corporate Giftset": { price: "500to1500", timeline: "standard", collections: ["bestseller", "premium", "personalized"] },
-  "Quà Tặng Tết Doanh Nghiệp": { price: "500to1500", timeline: "standard", collections: ["bestseller", "personalized"] },
+  "Tết An Khang": { price: "500to1500", timeline: "standard", collections: ["bestseller", "personalized"] },
+  "Tết Phú Quý": { price: "500to1500", timeline: "standard", collections: ["premium", "personalized"] },
+  "Tết Đại Cát": { price: "over1500", timeline: "standard", collections: ["premium", "personalized"] },
+  "Tết Như Ý": { price: "500to1500", timeline: "standard", collections: ["bestseller", "personalized"] },
+  "Tết Kim Phú": { price: "over1500", timeline: "custom", collections: ["premium", "personalized"] },
+  "Tết Nghênh Xuân": { price: "500to1500", timeline: "standard", collections: ["premium", "personalized"] },
+  "Tết Lộc Xanh": { price: "500to1500", timeline: "standard", collections: ["personalized"] },
+  "Tết Song Vượng": { price: "under500", timeline: "standard", collections: ["bestseller", "personalized"] },
+  "Tết Bình An": { price: "500to1500", timeline: "standard", collections: ["personalized"] },
+  "Tết Vạn Phúc": { price: "500to1500", timeline: "standard", collections: ["premium", "personalized"] },
 };
 
 const productMessages = {
@@ -112,7 +121,16 @@ const productMessages = {
   "Huy chương giải đấu": "Chúc mừng thành tích nổi bật tại mùa giải năm nay",
   "Custom Branded Trophy/Award": "Tôn vinh thành tựu theo dấu ấn thương hiệu riêng",
   "Corporate Giftset": "Trân trọng cảm ơn sự đồng hành và hợp tác bền vững",
-  "Quà Tặng Tết Doanh Nghiệp": "Kính chúc năm mới thịnh vượng và gắn kết bền lâu",
+  "Tết An Khang": "Kính chúc năm mới an khang, thịnh vượng và vạn sự như ý",
+  "Tết Phú Quý": "Kính chúc năm mới phú quý, thành công và hợp tác bền lâu",
+  "Tết Đại Cát": "Kính chúc năm mới đại cát, đại lợi và nhiều thành tựu mới",
+  "Tết Như Ý": "Kính chúc năm mới vạn sự như ý, gia đình bình an",
+  "Tết Kim Phú": "Trân trọng tri ân và kính chúc năm mới thịnh vượng",
+  "Tết Nghênh Xuân": "Hân hoan đón xuân mới, kính chúc thành công và may mắn",
+  "Tết Lộc Xanh": "Kính chúc năm mới xanh, khỏe mạnh và phát triển bền vững",
+  "Tết Song Vượng": "Kính chúc năm mới song vượng, tài lộc và thành công",
+  "Tết Bình An": "Kính chúc năm mới bình an, sức khỏe và hạnh phúc",
+  "Tết Vạn Phúc": "Kính chúc năm mới vạn phúc, đủ đầy và gắn kết",
 };
 
 const productSpecs = {
@@ -122,7 +140,16 @@ const productSpecs = {
   "Huy chương giải đấu": { code: "QV-MEDAL", material: "Hợp kim, nhãn kim loại, dây vải", size: "Theo môn thi và cấp giải", finish: "Ép nhiệt, in màu, dây theo thương hiệu" },
   "Custom Branded Trophy/Award": { code: "QV-CUSTOM", material: "Kính, kim loại, acrylic, gỗ", size: "Phát triển theo concept được duyệt", finish: "Phối vật liệu, khắc và in theo nhận diện" },
   "Corporate Giftset": { code: "QV-GIFTSET", material: "Hộp cứng, giấy mỹ thuật và sản phẩm chọn lọc", size: "Theo cấu hình 2–6 sản phẩm", finish: "Sleeve, thiệp, ép kim hoặc in logo" },
-  "Quà Tặng Tết Doanh Nghiệp": { code: "QV-TET", material: "Hộp cứng, túi giấy và sản phẩm Tết", size: "Theo bộ sưu tập và ngân sách", finish: "Sleeve, thiệp chúc Tết và bao bì thương hiệu" },
+  "Tết An Khang": { code: "QV-TET-AK", material: "Hộp cứng, trà, hạt và bánh", size: "Hộp 3 sản phẩm", finish: "Ép kim hoa mai, sleeve và thiệp" },
+  "Tết Phú Quý": { code: "QV-TET-PQ", material: "Hộp cứng, trà, hạt, trái cây và chocolate", size: "Hộp 5 sản phẩm", finish: "Ép kim trên hộp và túi" },
+  "Tết Đại Cát": { code: "QV-TET-DC", material: "Hộp cứng, đồ uống, cà phê, hạt và mứt", size: "Hộp 5 sản phẩm", finish: "Burgundy, champagne gold và thiệp VIP" },
+  "Tết Như Ý": { code: "QV-TET-NY", material: "Hộp ngăn kéo, trà, hạt sen, bánh và trái cây", size: "Hộp 5 sản phẩm", finish: "Họa tiết hoa sen và thiệp" },
+  "Tết Kim Phú": { code: "QV-TET-KP", material: "Hộp VIP, cà phê, đồ uống, hạt và chocolate", size: "Hộp 5 sản phẩm", finish: "Đen nhám, chi tiết vàng và huy hiệu" },
+  "Tết Nghênh Xuân": { code: "QV-TET-NX", material: "Hộp cứng, trà, hạt, quả sấy, mật ong và tách", size: "Hộp 6 sản phẩm", finish: "Xanh hoàng gia, ép kim" },
+  "Tết Lộc Xanh": { code: "QV-TET-LX", material: "Tre, cà phê, trà, hạt, trái cây và ly", size: "Hộp 6 sản phẩm", finish: "Khắc laser trên tre, sleeve giấy" },
+  "Tết Song Vượng": { code: "QV-TET-SV", material: "Hộp lục giác, trà, hạt, mứt và chocolate", size: "Hộp 4 sản phẩm", finish: "Đỏ son, họa tiết vàng" },
+  "Tết Bình An": { code: "QV-TET-BA", material: "Hộp cứng, trà thảo mộc, mật ong, hạt và bánh", size: "Hộp 6 sản phẩm", finish: "Ivory, xanh sage và thiệp sức khỏe" },
+  "Tết Vạn Phúc": { code: "QV-TET-VP", material: "Hộp tròn, trà, hạt, mứt và vật phẩm may mắn", size: "Hộp 6 sản phẩm", finish: "Sơn đỏ, họa tiết mây vàng" },
 };
 
 const recommendations = {
@@ -148,10 +175,28 @@ const recommendations = {
   },
   tet: {
     category: "tet",
-    title: "Quà Tặng Tết Doanh Nghiệp + bao bì thương hiệu",
+    title: "Bộ sưu tập 10 giftset Tết + bao bì thương hiệu",
     reason: "Phù hợp mùa tri ân cuối năm: dễ chia nhóm người nhận, cá nhân hóa thiệp/sleeve và quản lý giao hàng theo danh sách.",
   },
 };
+
+function createTetDetail(name, price, moq, summary, contents, image) {
+  return {
+    category: "Quà Tặng Tết",
+    summary,
+    price,
+    moq,
+    timeline: "14 - 30 ngày, nên khóa mẫu sớm trước mùa cao điểm",
+    fit: "Tri ân khách hàng, đối tác, lãnh đạo và nhân viên dịp Tết",
+    reasons: [
+      `Cấu hình ${contents} tạo trải nghiệm mở quà trọn vẹn.`,
+      "Bao bì có thể đồng bộ logo, lời chúc và cấp độ người nhận.",
+      "Hỗ trợ quản lý danh sách và phân tuyến giao hàng doanh nghiệp.",
+    ],
+    personalization: ["Logo trên hộp hoặc sleeve", "Thiệp chúc Tết", "Túi quà đồng bộ", "Phân nhóm người nhận"],
+    image,
+  };
+}
 
 const productDetails = {
   "Trophy Cup Kim Loại": {
@@ -244,21 +289,16 @@ const productDetails = {
     personalization: ["Logo trên hộp", "Sleeve thương hiệu", "Thiệp cảm ơn", "Thông điệp theo nhóm khách hàng"],
     image: "assets/product-tet-giftset.png",
   },
-  "Quà Tặng Tết Doanh Nghiệp": {
-    category: "Quà Tặng Tết",
-    summary: "Giftset Tết cho khách hàng, đối tác và nhân viên với bao bì đỏ-vàng, lời chúc và giao hàng theo danh sách.",
-    price: "350.000 - 1.500.000 VND",
-    moq: "100+",
-    timeline: "14 - 30 ngày, nên khóa mẫu sớm trước mùa cao điểm",
-    fit: "Tet gifting, year-end appreciation, corporate loyalty",
-    reasons: [
-      "Phù hợp mùa cao điểm tri ân với số lượng lớn.",
-      "Bao bì có thể đồng bộ thương hiệu, lời chúc và phân nhóm người nhận.",
-      "Giúp doanh nghiệp kiểm soát danh sách, ngân sách và giao hàng nhiều điểm.",
-    ],
-    personalization: ["Hộp và túi Tết", "Thiệp chúc Tết", "Sleeve thương hiệu", "Phân tuyến giao hàng theo danh sách"],
-    image: "assets/product-tet-giftset.png",
-  },
+  "Tết An Khang": createTetDetail("Tết An Khang", "650.000 - 950.000 VND", "100+", "Giftset đỏ hoa mai cân bằng giữa truyền thống, tính trang trọng và ngân sách doanh nghiệp.", "trà, hạt và bánh thủ công", "assets/tet-an-khang.jpg"),
+  "Tết Phú Quý": createTetDetail("Tết Phú Quý", "1.200.000 - 1.800.000 VND", "50+", "Giftset xanh ngọc cao cấp cho khách hàng và đối tác quan trọng.", "trà, hạt, trái cây sấy và chocolate", "assets/tet-phu-quy.jpg"),
+  "Tết Đại Cát": createTetDetail("Tết Đại Cát", "1.500.000 - 2.500.000 VND", "50+", "Bộ quà burgundy dành cho chương trình tri ân cấp quản lý và đối tác chiến lược.", "đồ uống lễ hội, cà phê, hạt và mứt", "assets/tet-dai-cat.jpg"),
+  "Tết Như Ý": createTetDetail("Tết Như Ý", "550.000 - 850.000 VND", "100+", "Hộp hoa sen tươi sáng, phù hợp chương trình nhân viên và khách hàng đại trà.", "trà, hạt sen, bánh và trái cây sấy", "assets/tet-nhu-y.jpg"),
+  "Tết Kim Phú": createTetDetail("Tết Kim Phú", "2.800.000 - 4.500.000 VND", "30+", "Giftset đen-vàng dành cho lãnh đạo, khách hàng VIP và đối tác chiến lược.", "cà phê, đồ uống, hạt, chocolate và vật phẩm bàn làm việc", "assets/tet-kim-phu.jpg"),
+  "Tết Nghênh Xuân": createTetDetail("Tết Nghênh Xuân", "1.100.000 - 1.600.000 VND", "50+", "Bộ quà xanh hoàng gia kết hợp thực phẩm và tách trà để sử dụng lâu dài.", "trà, hạt, quả sấy, mật ong, bánh và tách", "assets/tet-nghenh-xuan.jpg"),
+  "Tết Lộc Xanh": createTetDetail("Tết Lộc Xanh", "750.000 - 1.100.000 VND", "100+", "Bộ quà tre theo định hướng bền vững, phù hợp doanh nghiệp chú trọng môi trường.", "cà phê, trà, hạt, trái cây sấy và ly tái sử dụng", "assets/tet-loc-xanh.jpg"),
+  "Tết Song Vượng": createTetDetail("Tết Song Vượng", "420.000 - 680.000 VND", "100+", "Giftset lục giác gọn đẹp cho đơn hàng số lượng lớn và ngân sách tối ưu.", "trà, hạt, mứt gừng và chocolate", "assets/tet-song-vuong.jpg"),
+  "Tết Bình An": createTetDetail("Tết Bình An", "850.000 - 1.300.000 VND", "50+", "Bộ quà sức khỏe với bảng màu ivory và xanh sage thanh lịch.", "trà thảo mộc, mật ong, kỷ tử, hạt và bánh", "assets/tet-binh-an.jpg"),
+  "Tết Vạn Phúc": createTetDetail("Tết Vạn Phúc", "1.300.000 - 2.000.000 VND", "50+", "Hộp tròn sơn đỏ tạo điểm nhấn lễ hội cho khách hàng và đối tác cao cấp.", "trà, hạt, mứt, chocolate và vật phẩm may mắn", "assets/tet-van-phuc.jpg"),
 };
 
 let activeDetailProduct = "Cúp sao pha lê Milano";
