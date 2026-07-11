@@ -42,6 +42,7 @@ const navLinks = document.querySelectorAll(".nav-links a");
 const quoteDrawer = document.querySelector("#quote-drawer");
 const drawerClose = document.querySelector("#drawer-close");
 const sendQuote = document.querySelector("#send-quote");
+const quoteForm = document.querySelector("#quote-form");
 const quoteBudget = document.querySelector("#quote-budget");
 const quoteNote = document.querySelector("#quote-note");
 const guideOccasion = document.querySelector("#guide-occasion");
@@ -63,6 +64,10 @@ const detailPrice = document.querySelector("#detail-price");
 const detailMoq = document.querySelector("#detail-moq");
 const detailTimeline = document.querySelector("#detail-timeline");
 const detailFit = document.querySelector("#detail-fit");
+const detailCode = document.querySelector("#detail-code");
+const detailMaterial = document.querySelector("#detail-material");
+const detailSize = document.querySelector("#detail-size");
+const detailFinish = document.querySelector("#detail-finish");
 const detailPersonalization = document.querySelector("#detail-personalization");
 const detailQuote = document.querySelector("#detail-quote");
 const detailPersonalize = document.querySelector("#detail-personalize");
@@ -108,6 +113,16 @@ const productMessages = {
   "Custom Branded Trophy/Award": "Tôn vinh thành tựu theo dấu ấn thương hiệu riêng",
   "Corporate Giftset": "Trân trọng cảm ơn sự đồng hành và hợp tác bền vững",
   "Quà Tặng Tết Doanh Nghiệp": "Kính chúc năm mới thịnh vượng và gắn kết bền lâu",
+};
+
+const productSpecs = {
+  "Trophy Cup Kim Loại": { code: "QV-TROPHY", material: "Kim loại, đế composite hoặc gỗ", size: "Nhiều cỡ cho giải nhất, nhì, ba", finish: "Bảng tên khắc laser, logo hoặc nhãn màu" },
+  "Award Pha Lê Milano": { code: "QV-MILANO", material: "Pha lê quang học, chi tiết kim loại", size: "Nhiều kích thước theo hạng mục", finish: "Khắc laser, in UV hoặc bảng tên" },
+  "Bảng vinh danh thâm niên": { code: "QV-PLAQUE", material: "Gỗ, kim loại, mica hoặc pha lê", size: "Để bàn hoặc treo tường", finish: "Khắc laser, in UV, ép nhiệt" },
+  "Huy chương giải đấu": { code: "QV-MEDAL", material: "Hợp kim, nhãn kim loại, dây vải", size: "Theo môn thi và cấp giải", finish: "Ép nhiệt, in màu, dây theo thương hiệu" },
+  "Custom Branded Trophy/Award": { code: "QV-CUSTOM", material: "Kính, kim loại, acrylic, gỗ", size: "Phát triển theo concept được duyệt", finish: "Phối vật liệu, khắc và in theo nhận diện" },
+  "Corporate Giftset": { code: "QV-GIFTSET", material: "Hộp cứng, giấy mỹ thuật và sản phẩm chọn lọc", size: "Theo cấu hình 2–6 sản phẩm", finish: "Sleeve, thiệp, ép kim hoặc in logo" },
+  "Quà Tặng Tết Doanh Nghiệp": { code: "QV-TET", material: "Hộp cứng, túi giấy và sản phẩm Tết", size: "Theo bộ sưu tập và ngân sách", finish: "Sleeve, thiệp chúc Tết và bao bì thương hiệu" },
 };
 
 const recommendations = {
@@ -370,6 +385,7 @@ function renderList(target, items) {
 
 function openProductDetail(product) {
   const detail = productDetails[product];
+  const specs = productSpecs[product];
   activeDetailProduct = product;
 
   detailCategory.textContent = detail.category;
@@ -380,6 +396,10 @@ function openProductDetail(product) {
   detailMoq.textContent = detail.moq;
   detailTimeline.textContent = detail.timeline;
   detailFit.textContent = detail.fit;
+  detailCode.textContent = specs.code;
+  detailMaterial.textContent = specs.material;
+  detailSize.textContent = specs.size;
+  detailFinish.textContent = specs.finish;
   renderList(detailReasons, detail.reasons);
   renderList(detailPersonalization, detail.personalization);
   productDetailDrawer.classList.add("open");
@@ -635,16 +655,16 @@ detailPersonalize.addEventListener("click", () => {
   document.querySelector("#personalize").scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
-sendQuote.addEventListener("click", () => {
-  budgetInput.value = quoteBudget.value;
-  syncProgramMetrics();
-  closeQuoteDrawer();
-  metricStatus.textContent = "Brief báo giá đã tạo";
-  importStatus.textContent = "Brief báo giá đã sẵn sàng để đội ngũ Quà Việt tư vấn phương án sản phẩm và cá nhân hóa.";
-  importStatus.style.color = "#1c7c31";
-  activateWorkspacePanel("dashboard-panel");
-  document.querySelector("#workspace").scrollIntoView({ behavior: "smooth", block: "start" });
+quoteForm.addEventListener("submit", () => {
+  sendQuote.textContent = "Đang gửi yêu cầu...";
+  sendQuote.disabled = true;
 });
+
+if (new URLSearchParams(window.location.search).get("quote") === "success") {
+  metricStatus.textContent = "Đã gửi yêu cầu báo giá";
+  importStatus.textContent = "Cảm ơn bạn. Đội ngũ Quà Việt sẽ liên hệ trong vòng 24 giờ làm việc.";
+  importStatus.style.color = "#1c7c31";
+}
 
 syncPreview();
 syncProgramMetrics();
