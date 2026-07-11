@@ -96,7 +96,16 @@ let activeCollection = "all";
 const shortlist = new Set();
 
 const productDiscovery = {
-  "Trophy Cup Kim Loại": { price: "over1500", timeline: "standard", collections: ["bestseller", "premium", "personalized"] },
+  "Golf Classic Championship": { price: "over1500", timeline: "standard", collections: ["bestseller", "premium", "personalized"] },
+  "Golf Swing Elite": { price: "over1500", timeline: "standard", collections: ["premium", "personalized"] },
+  "Golf Crystal Drive": { price: "500to1500", timeline: "standard", collections: ["premium", "personalized"] },
+  "Golf Heritage Shield": { price: "500to1500", timeline: "standard", collections: ["personalized"] },
+  "Tennis Grand Slam Cup": { price: "500to1500", timeline: "standard", collections: ["bestseller", "premium", "personalized"] },
+  "Tennis Rally Sculpture": { price: "500to1500", timeline: "standard", collections: ["premium", "personalized"] },
+  "Pickleball Paddle Champion": { price: "500to1500", timeline: "fast", collections: ["fast", "personalized"] },
+  "Pickleball Rally Ring": { price: "500to1500", timeline: "standard", collections: ["personalized"] },
+  "Scholar Rising Star": { price: "500to1500", timeline: "fast", collections: ["fast", "personalized"] },
+  "Torch of Knowledge": { price: "500to1500", timeline: "standard", collections: ["premium", "personalized"] },
   "Crystal Prism Milano": { price: "500to1500", timeline: "fast", collections: ["bestseller", "fast", "premium", "personalized"] },
   "Crystal Rising Star": { price: "500to1500", timeline: "standard", collections: ["premium", "personalized"] },
   "Acrylic Color Motion": { price: "under500", timeline: "fast", collections: ["fast", "personalized"] },
@@ -142,7 +151,16 @@ const productDiscovery = {
 };
 
 const productMessages = {
-  "Trophy Cup Kim Loại": "Vinh danh nhà vô địch và thành tích thi đua nổi bật",
+  "Golf Classic Championship": "Vinh danh nhà vô địch và dấu ấn tại mùa giải golf năm nay",
+  "Golf Swing Elite": "Chúc mừng thành tích nổi bật và cú swing đầy bản lĩnh",
+  "Golf Crystal Drive": "Tôn vinh cú đánh xuất sắc và tinh thần thi đấu ấn tượng",
+  "Golf Heritage Shield": "Ghi danh thành tích và truyền thống đáng tự hào của câu lạc bộ",
+  "Tennis Grand Slam Cup": "Chúc mừng nhà vô địch với bản lĩnh và phong độ xuất sắc",
+  "Tennis Rally Sculpture": "Tôn vinh tinh thần thi đấu bền bỉ và những pha bóng ấn tượng",
+  "Pickleball Paddle Champion": "Chúc mừng nhà vô địch pickleball của mùa giải",
+  "Pickleball Rally Ring": "Tôn vinh tinh thần đồng đội và màn trình diễn xuất sắc",
+  "Scholar Rising Star": "Chúc mừng thành tích học tập xuất sắc và hành trình vươn cao",
+  "Torch of Knowledge": "Tôn vinh người truyền cảm hứng và đóng góp cho giáo dục",
   "Crystal Prism Milano": "Vinh danh thành tích xuất sắc và tinh thần dẫn dắt đội nhóm",
   "Crystal Rising Star": "Tôn vinh tài năng nổi bật và hành trình vươn tới những đỉnh cao mới",
   "Acrylic Color Motion": "Chúc mừng dấu ấn sáng tạo và tinh thần khác biệt",
@@ -188,7 +206,16 @@ const productMessages = {
 };
 
 const productSpecs = {
-  "Trophy Cup Kim Loại": { code: "QV-TROPHY", material: "Kim loại, đế composite hoặc gỗ", size: "Nhiều cỡ cho giải nhất, nhì, ba", finish: "Bảng tên khắc laser, logo hoặc nhãn màu" },
+  "Golf Classic Championship": { code: "QV-TRP-GCC", material: "Kim loại mạ, gỗ walnut", size: "3 cỡ cho champion và hạng mục", finish: "Mạ bạc, lòng vàng và bảng tên" },
+  "Golf Swing Elite": { code: "QV-TRP-GSE", material: "Đồng, gunmetal và granite", size: "3 cỡ theo hạng mục", finish: "Xước hairline, mạ màu và bảng tên" },
+  "Golf Crystal Drive": { code: "QV-TRP-GCD", material: "Pha lê quang học, đế pha lê emerald", size: "3 cỡ theo hạng mục", finish: "Vát cạnh, khắc laser" },
+  "Golf Heritage Shield": { code: "QV-TRP-GHS", material: "Gỗ walnut, đồng và men màu", size: "3 cỡ theo cấp giải", finish: "Sơn mờ, phù điêu và bảng đồng" },
+  "Tennis Grand Slam Cup": { code: "QV-TRP-TGC", material: "Kim loại mạ, đế đá", size: "Bộ vàng, bạc, đồng", finish: "Mạ ba màu, phù điêu bóng" },
+  "Tennis Rally Sculpture": { code: "QV-TRP-TRS", material: "Thép xước, hợp kim và granite", size: "3 cỡ theo hạng mục", finish: "Xước bạc, mạ vàng và bảng tên" },
+  "Pickleball Paddle Champion": { code: "QV-TRP-PPC", material: "Hợp kim, men màu và đế đá", size: "3 cỡ theo cấp giải", finish: "Xước bạc, viền vàng và men teal" },
+  "Pickleball Rally Ring": { code: "QV-TRP-PRR", material: "Hợp kim mạ, đế acrylic", size: "3 cỡ theo hạng mục", finish: "Mạ vàng/bạc và bảng tên" },
+  "Scholar Rising Star": { code: "QV-TRP-SRS", material: "Pha lê, đồng và đế navy", size: "3 cỡ theo cấp giải", finish: "Khắc laser, xước vàng" },
+  "Torch of Knowledge": { code: "QV-TRP-TOK", material: "Gỗ walnut, đồng và pha lê", size: "3 cỡ theo hạng mục", finish: "Sơn mờ, xước vàng và khắc" },
   "Crystal Prism Milano": { code: "QV-AWD-CPR", material: "Pha lê quang học", size: "3 cỡ theo hạng mục", finish: "Vát cạnh, khắc laser và hộp" },
   "Crystal Rising Star": { code: "QV-AWD-CST", material: "Pha lê trong, đế pha lê navy", size: "3 cỡ theo cấp giải", finish: "Khắc laser và bảng tên kim loại" },
   "Acrylic Color Motion": { code: "QV-AWD-ACM", material: "Acrylic trong và acrylic màu", size: "3 cỡ theo hạng mục", finish: "Cắt laser, in UV và ghép lớp" },
@@ -333,22 +360,35 @@ function createAwardDetail(price, moq, summary, materialStory, image, fit, timel
   };
 }
 
-const productDetails = {
-  "Trophy Cup Kim Loại": {
-    category: "Trophy",
-    summary: "Trophy cup kim loại cho giải đấu, thi đua kinh doanh, đại hội đại lý và các chương trình cần sân khấu mạnh.",
-    price: "650.000 - 2.800.000 VND",
-    moq: "10+",
-    timeline: "7 - 18 ngày sau duyệt mẫu",
-    fit: "Sports events, sales champion, dealer awards",
+function createTrophyDetail(category, price, moq, summary, designStory, image, fit, timeline = "10 - 21 ngày sau duyệt mẫu") {
+  return {
+    category,
+    summary,
+    price,
+    moq,
+    timeline,
+    fit,
     reasons: [
-      "Tạo hình ảnh chiến thắng rõ ràng, dễ nhận biết từ xa trên sân khấu.",
-      "Phù hợp giải nhất, champion, top performer và các hạng mục thi đua.",
-      "Có thể đồng bộ nhiều kích thước cho giải nhất/nhì/ba.",
+      `${designStory} giúp hạng mục được nhận diện rõ trên sân khấu và trong ảnh trao giải.`,
+      "Có thể triển khai nhiều kích thước cho champion, á quân và các giải chuyên môn.",
+      "Hỗ trợ kiểm tra tên, hạng mục và đóng hộp riêng theo danh sách trao thưởng.",
     ],
-    personalization: ["Bảng tên trên đế", "Logo hoặc tên giải", "Kích thước theo hạng giải", "Hộp vận chuyển hoặc hộp trao tặng"],
-    image: "assets/product-trophy.png",
-  },
+    personalization: ["Logo và tên giải", "Tên người nhận", "Hạng mục và năm tổ chức", "Hộp trao tặng"],
+    image,
+  };
+}
+
+const productDetails = {
+  "Golf Classic Championship": createTrophyDetail("Golf Trophy", "2.800.000 - 6.500.000 VND", "3+", "Cúp golf phong cách championship dành cho giải vô địch, nhà tài trợ và sự kiện câu lạc bộ cao cấp.", "Cúp bạc tay cầm, lòng vàng và đế walnut", "assets/trophy-golf-classic.jpg", "Golf champion, club championship và sponsor tournaments", "14 - 30 ngày sau duyệt mẫu"),
+  "Golf Swing Elite": createTrophyDetail("Golf Trophy", "1.500.000 - 3.200.000 VND", "10+", "Tượng golf kim loại tạo hình cú swing cho các giải chuyên môn và thành tích cá nhân.", "Đường cong golfer bằng đồng trên đế granite", "assets/trophy-golf-swing.jpg", "Best gross, best net, longest drive và nearest pin"),
+  "Golf Crystal Drive": createTrophyDetail("Golf Trophy", "1.200.000 - 2.800.000 VND", "10+", "Bóng golf pha lê bắt sáng tốt, phù hợp giải golf doanh nghiệp và hạng mục kỹ thuật.", "Bóng golf pha lê trên tee và đế emerald", "assets/trophy-golf-crystal.jpg", "Longest drive, hole-in-one và corporate golf"),
+  "Golf Heritage Shield": createTrophyDetail("Golf Trophy", "950.000 - 1.800.000 VND", "20+", "Cúp gỗ mang cảm giác truyền thống cho câu lạc bộ, giải thường niên và nhiều cấp hạng.", "Gỗ walnut phối phù điêu green golf bằng đồng", "assets/trophy-golf-heritage.jpg", "Club awards, annual tournaments và member recognition"),
+  "Tennis Grand Slam Cup": createTrophyDetail("Tennis Trophy", "1.200.000 - 3.500.000 VND", "10+", "Bộ cúp tennis vàng, bạc, đồng cho vô địch, á quân và các nội dung thi đấu.", "Cúp kim loại có phù điêu đường seam bóng tennis", "assets/trophy-tennis-cup.jpg", "Singles, doubles, club tournaments và corporate tennis"),
+  "Tennis Rally Sculpture": createTrophyDetail("Tennis Trophy", "1.400.000 - 2.900.000 VND", "10+", "Tượng vợt tennis hiện đại cho giải cấp cao và các hạng mục chuyên môn.", "Cụm vợt thép xước, bóng vàng và đường chuyển động", "assets/trophy-tennis-racket.jpg", "Championship, MVP, best player và tennis leagues"),
+  "Pickleball Paddle Champion": createTrophyDetail("Pickleball Trophy", "850.000 - 1.900.000 VND", "20+", "Cúp pickleball dễ nhận biết cho nội dung đơn, đôi, câu lạc bộ và phong trào doanh nghiệp.", "Hai paddle bắt chéo và bóng perforated", "assets/trophy-pickleball-paddle.jpg", "Singles, doubles, club events và company tournaments"),
+  "Pickleball Rally Ring": createTrophyDetail("Pickleball Trophy", "1.100.000 - 2.400.000 VND", "20+", "Thiết kế vòng tròn gọn hiện đại cho các giải pickleball cần nhận diện sân khấu mạnh.", "Vòng kim loại ôm paddle và bóng trên đế xanh", "assets/trophy-pickleball-rally.jpg", "Pickleball championship, team events và sponsor awards"),
+  "Scholar Rising Star": createTrophyDetail("Education Trophy", "950.000 - 1.800.000 VND", "20+", "Cúp học thuật pha lê cho học sinh, sinh viên xuất sắc và cuộc thi kiến thức.", "Sách pha lê nâng ngôi sao vàng", "assets/trophy-education-scholar.jpg", "Academic excellence, olympiad và student awards"),
+  "Torch of Knowledge": createTrophyDetail("Education Trophy", "1.300.000 - 2.600.000 VND", "10+", "Cúp giáo dục cao cấp dành cho nhà giáo, lãnh đạo và sáng kiến tạo tác động trong học tập.", "Ngọn đuốc vàng trên thân gỗ với chi tiết pha lê", "assets/trophy-education-torch.jpg", "Teacher awards, education leadership và innovation"),
   "Crystal Prism Milano": createAwardDetail("890.000 - 1.650.000 VND", "10+", "Award pha lê quang học thanh lịch cho các chương trình vinh danh cần hình ảnh trang trọng và vượt thời gian.", "Pha lê vát cạnh bắt sáng tốt", "assets/award-crystal-prism.jpg", "Employee awards, dealer awards và partner recognition", "7 - 14 ngày sau duyệt mẫu"),
   "Crystal Rising Star": createAwardDetail("1.200.000 - 2.400.000 VND", "10+", "Biểu tượng ngôi sao vươn cao phù hợp ghi nhận tài năng, lãnh đạo và thành tích nổi bật.", "Pha lê trong kết hợp đế navy", "assets/award-crystal-star.jpg", "Rising talent, leadership awards và top performers"),
   "Acrylic Color Motion": createAwardDetail("420.000 - 850.000 VND", "20+", "Award acrylic nhiều màu cho chương trình trẻ trung, thương hiệu sáng tạo và ngân sách linh hoạt.", "Acrylic trong phối lớp màu thương hiệu", "assets/award-acrylic-color.jpg", "Creative awards, brand events và youth programs", "7 - 14 ngày sau duyệt thiết kế"),
