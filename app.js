@@ -97,7 +97,16 @@ const shortlist = new Set();
 
 const productDiscovery = {
   "Trophy Cup Kim Loại": { price: "over1500", timeline: "standard", collections: ["bestseller", "premium", "personalized"] },
-  "Award Pha Lê Milano": { price: "500to1500", timeline: "fast", collections: ["bestseller", "fast", "premium", "personalized"] },
+  "Crystal Prism Milano": { price: "500to1500", timeline: "fast", collections: ["bestseller", "fast", "premium", "personalized"] },
+  "Crystal Rising Star": { price: "500to1500", timeline: "standard", collections: ["premium", "personalized"] },
+  "Acrylic Color Motion": { price: "under500", timeline: "fast", collections: ["fast", "personalized"] },
+  "Acrylic Innovation Orbit": { price: "500to1500", timeline: "fast", collections: ["bestseller", "personalized"] },
+  "Metal Ascend Sail": { price: "over1500", timeline: "standard", collections: ["premium", "personalized"] },
+  "Metal Infinity Orbit": { price: "over1500", timeline: "standard", collections: ["premium", "personalized"] },
+  "Wood Legacy Monolith": { price: "500to1500", timeline: "standard", collections: ["premium", "personalized"] },
+  "Wood Metal Horizon": { price: "500to1500", timeline: "standard", collections: ["premium", "personalized"] },
+  "Crystal Metal Apex": { price: "over1500", timeline: "custom", collections: ["premium", "personalized"] },
+  "Eco Fusion Impact": { price: "500to1500", timeline: "standard", collections: ["personalized"] },
   "Bảng vinh danh thâm niên": { price: "under500", timeline: "fast", collections: ["bestseller", "fast", "personalized"] },
   "Marathon Finisher": { price: "under500", timeline: "fast", collections: ["bestseller", "fast", "personalized"] },
   "Championship Trio": { price: "under500", timeline: "fast", collections: ["bestseller", "fast", "personalized"] },
@@ -134,7 +143,16 @@ const productDiscovery = {
 
 const productMessages = {
   "Trophy Cup Kim Loại": "Vinh danh nhà vô địch và thành tích thi đua nổi bật",
-  "Award Pha Lê Milano": "Vinh danh thành tích xuất sắc và tinh thần dẫn dắt đội nhóm",
+  "Crystal Prism Milano": "Vinh danh thành tích xuất sắc và tinh thần dẫn dắt đội nhóm",
+  "Crystal Rising Star": "Tôn vinh tài năng nổi bật và hành trình vươn tới những đỉnh cao mới",
+  "Acrylic Color Motion": "Chúc mừng dấu ấn sáng tạo và tinh thần khác biệt",
+  "Acrylic Innovation Orbit": "Ghi nhận ý tưởng đột phá và đóng góp cho đổi mới",
+  "Metal Ascend Sail": "Tôn vinh bản lĩnh dẫn dắt và thành tích bứt phá",
+  "Metal Infinity Orbit": "Trân trọng ghi nhận mối quan hệ hợp tác bền vững",
+  "Wood Legacy Monolith": "Trân trọng ghi nhận hành trình cống hiến và di sản để lại",
+  "Wood Metal Horizon": "Chúc mừng cột mốc tăng trưởng và hành trình vươn xa",
+  "Crystal Metal Apex": "Tôn vinh thành tựu đỉnh cao và vai trò lãnh đạo xuất sắc",
+  "Eco Fusion Impact": "Ghi nhận sáng kiến tạo tác động tích cực và bền vững",
   "Bảng vinh danh thâm niên": "Ghi nhận hành trình cống hiến và gắn bó cùng tổ chức",
   "Marathon Finisher": "Chúc mừng bạn đã chinh phục cự ly và hoàn thành hành trình đầy tự hào",
   "Championship Trio": "Chúc mừng thành tích xuất sắc tại mùa giải năm nay",
@@ -171,7 +189,16 @@ const productMessages = {
 
 const productSpecs = {
   "Trophy Cup Kim Loại": { code: "QV-TROPHY", material: "Kim loại, đế composite hoặc gỗ", size: "Nhiều cỡ cho giải nhất, nhì, ba", finish: "Bảng tên khắc laser, logo hoặc nhãn màu" },
-  "Award Pha Lê Milano": { code: "QV-MILANO", material: "Pha lê quang học, chi tiết kim loại", size: "Nhiều kích thước theo hạng mục", finish: "Khắc laser, in UV hoặc bảng tên" },
+  "Crystal Prism Milano": { code: "QV-AWD-CPR", material: "Pha lê quang học", size: "3 cỡ theo hạng mục", finish: "Vát cạnh, khắc laser và hộp" },
+  "Crystal Rising Star": { code: "QV-AWD-CST", material: "Pha lê trong, đế pha lê navy", size: "3 cỡ theo cấp giải", finish: "Khắc laser và bảng tên kim loại" },
+  "Acrylic Color Motion": { code: "QV-AWD-ACM", material: "Acrylic trong và acrylic màu", size: "3 cỡ theo hạng mục", finish: "Cắt laser, in UV và ghép lớp" },
+  "Acrylic Innovation Orbit": { code: "QV-AWD-AIO", material: "Acrylic khói, acrylic trong", size: "3 cỡ theo cấp giải", finish: "Ghép lớp, in UV và viền màu" },
+  "Metal Ascend Sail": { code: "QV-AWD-MAS", material: "Thép không gỉ, hợp kim và đá", size: "3 cỡ theo hạng mục", finish: "Xước hairline, mạ champagne" },
+  "Metal Infinity Orbit": { code: "QV-AWD-MIO", material: "Đồng, gunmetal và granite", size: "3 cỡ theo cấp giải", finish: "Uốn kim loại, xước và mạ màu" },
+  "Wood Legacy Monolith": { code: "QV-AWD-WLM", material: "Gỗ walnut, đồng", size: "3 cỡ theo thâm niên", finish: "Sơn mờ, nẹp và bảng đồng" },
+  "Wood Metal Horizon": { code: "QV-AWD-WMH", material: "Gỗ oak, thép và đá", size: "3 cỡ theo hạng mục", finish: "Xước kim loại, dầu gỗ và bảng tên" },
+  "Crystal Metal Apex": { code: "QV-AWD-CMA", material: "Pha lê quang học, kim loại và đế đen", size: "3 cỡ VIP", finish: "Vát cạnh, mạ vàng và khắc 3D" },
+  "Eco Fusion Impact": { code: "QV-AWD-EFI", material: "Acrylic tái chế, tre và acrylic trong", size: "3 cỡ theo hạng mục", finish: "In UV, khắc laser trên tre" },
   "Bảng vinh danh thâm niên": { code: "QV-PLAQUE", material: "Gỗ, kim loại, mica hoặc pha lê", size: "Để bàn hoặc treo tường", finish: "Khắc laser, in UV, ép nhiệt" },
   "Marathon Finisher": { code: "QV-MED-RUN", material: "Hợp kim đúc, dây dệt", size: "65 - 90 mm", finish: "Mạ đồng cổ, phù điêu và in dây" },
   "Championship Trio": { code: "QV-MED-TRIO", material: "Hợp kim, dây dệt", size: "55 - 75 mm", finish: "Mạ vàng, bạc, đồng và khắc hạng" },
@@ -209,8 +236,8 @@ const productSpecs = {
 const recommendations = {
   employee: {
     category: "award",
-    title: "Award Pha Lê Milano + bảng tên cá nhân hóa",
-    reason: "Phù hợp chương trình vinh danh nhân viên: trang trọng, dễ khắc tên, kiểm soát chi phí theo số lượng và dùng tốt trong lễ trao giải.",
+    title: "Bộ sưu tập 10 Award theo chất liệu và cấp độ",
+    reason: "Phù hợp chương trình vinh danh nhân viên: dễ chọn pha lê, acrylic, kim loại, gỗ hoặc phối vật liệu theo ngân sách và tính chất giải thưởng.",
   },
   partner: {
     category: "giftsets",
@@ -288,6 +315,24 @@ function createMedalDetail(price, moq, summary, style, image, fit, timeline = "1
   };
 }
 
+function createAwardDetail(price, moq, summary, materialStory, image, fit, timeline = "10 - 21 ngày sau duyệt mẫu") {
+  return {
+    category: "Award",
+    summary,
+    price,
+    moq,
+    timeline,
+    fit,
+    reasons: [
+      `${materialStory} tạo dấu ấn riêng khi trưng bày và trao thưởng trên sân khấu.`,
+      "Có thể chuẩn hóa nhiều kích thước nhưng vẫn cá nhân hóa tên và danh hiệu từng người.",
+      "Hỗ trợ duyệt nội dung, kiểm tra chính tả và đóng hộp theo danh sách trao giải.",
+    ],
+    personalization: ["Logo doanh nghiệp", "Tên người nhận", "Danh hiệu và năm trao giải", "Hộp trao tặng cao cấp"],
+    image,
+  };
+}
+
 const productDetails = {
   "Trophy Cup Kim Loại": {
     category: "Trophy",
@@ -304,21 +349,16 @@ const productDetails = {
     personalization: ["Bảng tên trên đế", "Logo hoặc tên giải", "Kích thước theo hạng giải", "Hộp vận chuyển hoặc hộp trao tặng"],
     image: "assets/product-trophy.png",
   },
-  "Award Pha Lê Milano": {
-    category: "Award",
-    summary: "Mẫu cúp trang trọng cho lễ vinh danh nhân viên, lãnh đạo dự án, đại lý hoặc đối tác xuất sắc.",
-    price: "890.000 - 1.650.000 VND",
-    moq: "10+",
-    timeline: "7 - 14 ngày sau duyệt mẫu",
-    fit: "Employee awards, sales awards, partner awards",
-    reasons: [
-      "Tạo cảm giác trang trọng trên sân khấu và trong ảnh truyền thông.",
-      "Bề mặt phù hợp khắc tên, danh hiệu, logo và năm trao giải.",
-      "Dễ chuẩn hóa theo nhiều cấp giải nhưng vẫn cá nhân hóa từng người nhận.",
-    ],
-    personalization: ["Logo doanh nghiệp", "Tên người nhận", "Danh hiệu / hạng mục", "Hộp trao tặng cao cấp"],
-    image: "assets/quaviet-recognition-award.png",
-  },
+  "Crystal Prism Milano": createAwardDetail("890.000 - 1.650.000 VND", "10+", "Award pha lê quang học thanh lịch cho các chương trình vinh danh cần hình ảnh trang trọng và vượt thời gian.", "Pha lê vát cạnh bắt sáng tốt", "assets/award-crystal-prism.jpg", "Employee awards, dealer awards và partner recognition", "7 - 14 ngày sau duyệt mẫu"),
+  "Crystal Rising Star": createAwardDetail("1.200.000 - 2.400.000 VND", "10+", "Biểu tượng ngôi sao vươn cao phù hợp ghi nhận tài năng, lãnh đạo và thành tích nổi bật.", "Pha lê trong kết hợp đế navy", "assets/award-crystal-star.jpg", "Rising talent, leadership awards và top performers"),
+  "Acrylic Color Motion": createAwardDetail("420.000 - 850.000 VND", "20+", "Award acrylic nhiều màu cho chương trình trẻ trung, thương hiệu sáng tạo và ngân sách linh hoạt.", "Acrylic trong phối lớp màu thương hiệu", "assets/award-acrylic-color.jpg", "Creative awards, brand events và youth programs", "7 - 14 ngày sau duyệt thiết kế"),
+  "Acrylic Innovation Orbit": createAwardDetail("650.000 - 1.200.000 VND", "20+", "Thiết kế vòng tròn nhiều lớp diễn tả chuyển động, kết nối và đổi mới liên tục.", "Acrylic khói, acrylic trong và viền cyan", "assets/award-acrylic-orbit.jpg", "Innovation awards, technology teams và transformation programs"),
+  "Metal Ascend Sail": createAwardDetail("1.500.000 - 2.800.000 VND", "10+", "Tạo hình cánh buồm kim loại thể hiện bản lĩnh, tăng trưởng và tinh thần dẫn dắt.", "Thép xước phối kim loại mạ champagne", "assets/award-metal-sail.jpg", "Sales leadership, executive awards và dealer champions"),
+  "Metal Infinity Orbit": createAwardDetail("1.800.000 - 3.500.000 VND", "10+", "Tác phẩm kim loại giao thoa phù hợp tôn vinh quan hệ hợp tác và thành tựu dài hạn.", "Vòng đồng và gunmetal trên đế granite", "assets/award-metal-orbit.jpg", "Strategic partners, anniversaries và executive recognition", "14 - 28 ngày sau duyệt mẫu"),
+  "Wood Legacy Monolith": createAwardDetail("850.000 - 1.600.000 VND", "20+", "Award gỗ ấm áp, bền vững cho thâm niên, cống hiến và dấu ấn lãnh đạo.", "Gỗ walnut nguyên khối điểm nẹp đồng", "assets/award-wood-legacy.jpg", "Service awards, retirement và legacy recognition"),
+  "Wood Metal Horizon": createAwardDetail("1.100.000 - 2.100.000 VND", "20+", "Phối gỗ và kim loại cân bằng cảm giác truyền thống với tinh thần tiến về phía trước.", "Gỗ oak, thép xước và điểm nhấn vàng", "assets/award-wood-metal.jpg", "Milestone awards, growth awards và project recognition"),
+  "Crystal Metal Apex": createAwardDetail("2.200.000 - 4.200.000 VND", "10+", "Award phối pha lê và kim loại cao cấp dành cho thành tựu đỉnh cao và người nhận VIP.", "Pha lê faceted được nâng bởi hai cánh kim loại vàng", "assets/award-crystal-metal.jpg", "C-suite awards, lifetime achievement và strategic partners", "18 - 35 ngày sau duyệt mẫu"),
+  "Eco Fusion Impact": createAwardDetail("650.000 - 1.300.000 VND", "30+", "Award định hướng bền vững cho sáng kiến xanh, ESG và các chương trình tạo tác động tích cực.", "Acrylic xanh tái chế kết hợp đế tre", "assets/award-eco-fusion.jpg", "ESG awards, sustainability initiatives và social impact"),
   "Bảng vinh danh thâm niên": {
     category: "Plaque",
     summary: "Kỷ vật lưu giữ lâu dài cho thâm niên, cột mốc cá nhân và đóng góp nổi bật.",
