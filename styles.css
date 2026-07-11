@@ -1703,6 +1703,11 @@ button:focus-visible {
   gap: 6px;
 }
 
+.testimonial-list blockquote footer strong,
+.testimonial-list blockquote footer span {
+  display: block;
+}
+
 .testimonial-list blockquote footer span {
   color: var(--muted);
   font-size: 13px;
@@ -1956,7 +1961,9 @@ button:focus-visible {
 
 .quote-consent input {
   accent-color: var(--red);
+  height: 18px;
   min-height: 18px;
+  padding: 0;
   width: 18px;
 }
 
