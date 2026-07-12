@@ -366,6 +366,27 @@ svg {
   padding: 20px;
 }
 
+.seo-category-nav {
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.seo-category-nav a {
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  padding: 22px 20px;
+  text-decoration: none;
+}
+
+.seo-category-nav a + a { border-left: 1px solid var(--line); }
+.seo-category-nav a:hover strong { color: var(--brand); }
+.seo-category-nav strong { font-size: 15px; }
+.seo-category-nav span { color: var(--muted); font-size: 12px; line-height: 1.45; }
+
 .guide-copy span,
 .recommendation-panel span {
   color: var(--red);
@@ -2099,6 +2120,10 @@ button:focus-visible {
 }
 
 @media (max-width: 760px) {
+  .seo-category-nav { grid-template-columns: 1fr 1fr; }
+  .seo-category-nav a { border-bottom: 1px solid var(--line); padding: 18px; }
+  .seo-category-nav a + a { border-left: 0; }
+  .seo-category-nav a:nth-child(even) { border-left: 1px solid var(--line); }
   .site-header {
     gap: 14px;
     min-height: 70px;
