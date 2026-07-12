@@ -278,8 +278,8 @@ const recommendations = {
   },
   milestone: {
     category: "plaques",
-    title: "Bảng vinh danh thâm niên + hộp trao tặng",
-    reason: "Phù hợp cột mốc cá nhân: có diện tích cho tên, số năm, lời tri ân và chất liệu trang trọng để lưu giữ lâu dài.",
+    title: "Bộ sưu tập 10 plaque theo dịp vinh danh",
+    reason: "Phù hợp cột mốc cá nhân, đối tác và chương trình nội bộ: dễ chọn theo chất liệu, cách trưng bày, ngân sách và mức độ trang trọng.",
   },
   tet: {
     category: "tet",
@@ -378,6 +378,42 @@ function createTrophyDetail(category, price, moq, summary, designStory, image, f
   };
 }
 
+function createPlaqueDetail(price, moq, summary, materialStory, image, fit, timeline = "10 - 21 ngày sau duyệt mẫu") {
+  return {
+    category: "Plaque vinh danh",
+    summary,
+    price,
+    moq,
+    timeline,
+    fit,
+    reasons: [
+      `${materialStory} tạo cảm giác trang trọng và có diện tích tốt cho nội dung tri ân.`,
+      "Có thể chuẩn hóa bố cục nhưng cá nhân hóa tên, cột mốc và thông điệp từng người.",
+      "Hỗ trợ kiểm tra nội dung và đóng hộp theo danh sách trao tặng.",
+    ],
+    personalization: ["Logo doanh nghiệp", "Tên và chức danh", "Cột mốc hoặc thành tích", "Hộp trao tặng"],
+    image,
+  };
+}
+
+function createBrandConceptDetail(price, moq, summary, designStory, image, fit) {
+  return {
+    category: "Custom Branded - Concept minh họa",
+    summary: `${summary} Đây là concept mô phỏng năng lực thiết kế của Quà Việt, không phải dự án chính thức hay sự xác nhận từ thương hiệu được nhắc đến.`,
+    price,
+    moq,
+    timeline: "21 - 45 ngày tùy mức độ phát triển form dáng",
+    fit,
+    reasons: [
+      `${designStory} cho thấy cách chuyển ngôn ngữ thương hiệu thành một vật phẩm vinh danh riêng.`,
+      "Quà Việt phát triển concept, phối vật liệu và prototype trước khi sản xuất hàng loạt.",
+      "Mẫu thực tế chỉ sử dụng logo và tài sản thương hiệu khi khách hàng có quyền phê duyệt.",
+    ],
+    personalization: ["Form dáng độc quyền", "Màu và logo được duyệt", "Tên giải và người nhận", "Hộp đồng bộ thương hiệu"],
+    image,
+  };
+}
+
 const productDetails = {
   "Golf Classic Championship": createTrophyDetail("Golf Trophy", "2.800.000 - 6.500.000 VND", "3+", "Cúp golf phong cách championship dành cho giải vô địch, nhà tài trợ và sự kiện câu lạc bộ cao cấp.", "Cúp bạc tay cầm, lòng vàng và đế walnut", "assets/trophy-golf-classic.jpg", "Golf champion, club championship và sponsor tournaments", "14 - 30 ngày sau duyệt mẫu"),
   "Golf Swing Elite": createTrophyDetail("Golf Trophy", "1.500.000 - 3.200.000 VND", "10+", "Tượng golf kim loại tạo hình cú swing cho các giải chuyên môn và thành tích cá nhân.", "Đường cong golfer bằng đồng trên đế granite", "assets/trophy-golf-swing.jpg", "Best gross, best net, longest drive và nearest pin"),
@@ -460,6 +496,46 @@ const productDetails = {
   "Tết Bình An": createTetDetail("Tết Bình An", "850.000 - 1.300.000 VND", "50+", "Bộ quà sức khỏe với bảng màu ivory và xanh sage thanh lịch.", "trà thảo mộc, mật ong, kỷ tử, hạt và bánh", "assets/tet-binh-an.jpg"),
   "Tết Vạn Phúc": createTetDetail("Tết Vạn Phúc", "1.300.000 - 2.000.000 VND", "50+", "Hộp tròn sơn đỏ tạo điểm nhấn lễ hội cho khách hàng và đối tác cao cấp.", "trà, hạt, mứt, chocolate và vật phẩm may mắn", "assets/tet-van-phuc.jpg"),
 };
+
+const plaqueCollection = [
+  ["Long Service Legacy", "500to1500", "standard", "650.000 - 1.400.000 VND", "20+", "Plaque gỗ và kim loại dành cho các cột mốc 5, 10, 20 năm cống hiến.", "Gỗ walnut phối bảng kim loại", "assets/plaque-long-service.jpg", "Service awards, retirement và employee milestones", "QV-PLQ-LSL", "Gỗ walnut, kim loại", "Khắc laser, in UV và bảng tên"],
+  ["Crystal Certificate", "500to1500", "standard", "850.000 - 1.700.000 VND", "10+", "Chứng nhận pha lê cho thành tích cấp cao và quan hệ đối tác chiến lược.", "Pha lê quang học vát cạnh", "assets/plaque-crystal-certificate.jpg", "Executive recognition và partner appreciation", "QV-PLQ-CRC", "Pha lê quang học", "Vát cạnh, khắc laser và hộp"],
+  ["Executive Metal Honor", "500to1500", "standard", "750.000 - 1.500.000 VND", "20+", "Plaque kim loại hiện đại cho lãnh đạo, top sales và thành tích vận hành.", "Kim loại xước phối đế tối màu", "assets/plaque-metal-honor.jpg", "Leadership, sales và operational excellence", "QV-PLQ-EMH", "Thép xước, hợp kim", "Ăn mòn, mạ màu và bảng tên"],
+  ["Color Acrylic Recognition", "under500", "fast", "420.000 - 850.000 VND", "30+", "Plaque acrylic nhiều lớp dễ đồng bộ màu sắc của chiến dịch và thương hiệu.", "Acrylic trong phối lớp màu", "assets/plaque-acrylic-color.jpg", "Creative teams, campaigns và youth programs", "QV-PLQ-CAR", "Acrylic trong và acrylic màu", "Cắt laser, in UV và ghép lớp"],
+  ["Premium Leather Presentation", "500to1500", "standard", "550.000 - 1.100.000 VND", "30+", "Plaque bọc da dạng mở tạo nghi thức trao tặng trang trọng.", "Da cao cấp phối bảng kim loại", "assets/plaque-leather-presentation.jpg", "Leadership gifts và formal ceremonies", "QV-PLQ-PLP", "Da PU cao cấp, kim loại", "Dập logo, khắc và lót nhung"],
+  ["Academic Honor", "under500", "fast", "450.000 - 950.000 VND", "30+", "Thiết kế học thuật cho nhà giáo, học sinh xuất sắc và đối tác nhà trường.", "Gỗ và kim loại với ngôn ngữ học thuật", "assets/plaque-academic.jpg", "Schools, universities và teacher recognition", "QV-PLQ-ACH", "Gỗ, kim loại", "Khắc tên trường, niên khóa và thành tích"],
+  ["Strategic Partner Appreciation", "500to1500", "standard", "1.100.000 - 2.200.000 VND", "10+", "Plaque cao cấp cho ký kết, kỷ niệm hợp tác và tri ân đối tác chiến lược.", "Pha lê phối kim loại mạ", "assets/plaque-partner.jpg", "Strategic partners, anniversaries và signing ceremonies", "QV-PLQ-SPA", "Pha lê, kim loại", "Khắc logo đôi, mạ màu và hộp VIP"],
+  ["Sustainable Bamboo Impact", "under500", "standard", "480.000 - 980.000 VND", "30+", "Plaque tre tối giản cho ESG, sáng kiến xanh và chương trình cộng đồng.", "Tre tự nhiên phối acrylic tái chế", "assets/plaque-bamboo.jpg", "ESG, sustainability và social impact", "QV-PLQ-SBI", "Tre, acrylic", "Khắc tre, in UV và phủ bảo vệ"],
+  ["Architectural Commemorative", "over1500", "custom", "1.500.000 - 3.500.000 VND", "10+", "Phù điêu kiến trúc đặt riêng cho khánh thành và cột mốc công trình.", "Phù điêu kim loại theo công trình thực tế", "assets/plaque-architectural.jpg", "Grand openings, real estate và heritage milestones", "QV-PLQ-ARC", "Kim loại đúc, gỗ hoặc đá", "Phù điêu, mạ màu và bảng tên"],
+  ["Executive Desk Recognition", "500to1500", "standard", "850.000 - 1.600.000 VND", "20+", "Kỷ vật để bàn gọn sang cho quản lý, chuyên gia và nhân sự chủ chốt.", "Pha lê và kim loại trên đế để bàn", "assets/plaque-executive-desk.jpg", "Management, expert và key talent recognition", "QV-PLQ-EDR", "Pha lê, kim loại, đế gỗ", "Khắc tên, chức danh và biểu tượng"],
+];
+
+const brandConceptCollection = [
+  ["Concept Vietcombank", "Từ 1.800.000 VND", "30+", "Concept xanh ngọc cho chương trình vinh danh ngành ngân hàng.", "Chuyển động tăng trưởng và cảm giác tin cậy", "assets/custom-vietcombank-concept.jpg", "Banking excellence, leadership và partner awards", "QV-CUS-VCB", "Pha lê xanh, kim loại"],
+  ["Concept FPT", "Từ 1.800.000 VND", "30+", "Concept đa sắc cho đổi mới, công nghệ và chuyển đổi số.", "Cấu trúc số hóa với ba lớp màu năng động", "assets/custom-fpt-concept.jpg", "Technology, innovation và transformation awards", "QV-CUS-FPT", "Acrylic màu, kim loại"],
+  ["Concept Vinamilk", "Từ 1.800.000 VND", "30+", "Concept xanh trắng trong trẻo cho chất lượng và phát triển bền vững.", "Đường cong mềm và hình ảnh tăng trưởng tự nhiên", "assets/custom-vinamilk-concept.jpg", "Quality, sustainability và employee recognition", "QV-CUS-VNM", "Pha lê màu, acrylic"],
+  ["Concept Viettel", "Từ 1.800.000 VND", "30+", "Concept đỏ mạnh mẽ cho viễn thông, sáng tạo và thành tích kinh doanh.", "Nhịp kết nối và chuyển động hướng về phía trước", "assets/custom-viettel-concept.jpg", "Telecom, innovation và sales awards", "QV-CUS-VTL", "Pha lê đỏ, kim loại"],
+  ["Concept Vietnam Airlines", "Từ 2.200.000 VND", "20+", "Concept xanh vàng thanh lịch cho dịch vụ xuất sắc và cột mốc hàng không.", "Đường bay vươn cao và chi tiết mạ vàng", "assets/custom-vietnam-airlines-concept.jpg", "Service excellence, aviation milestones và leadership", "QV-CUS-VNA", "Pha lê xanh, kim loại mạ vàng"],
+  ["Concept VinFast", "Từ 2.200.000 VND", "20+", "Concept xanh bạc cho công nghệ xe điện và tinh thần tiên phong.", "Hình khối khí động học và bề mặt kim loại chính xác", "assets/custom-vinfast-concept.jpg", "Automotive innovation, engineering và dealer awards", "QV-CUS-VFS", "Pha lê xanh, thép xước"],
+  ["Concept Petrolimex", "Từ 1.800.000 VND", "30+", "Concept xanh cobalt và cam cho an toàn, vận hành và mạng lưới phân phối.", "Hình ảnh năng lượng được bao quanh bởi vòng liên kết", "assets/custom-petrolimex-concept.jpg", "Safety, operations và distributor recognition", "QV-CUS-PLX", "Pha lê màu, kim loại"],
+  ["Concept Hòa Phát", "Từ 2.200.000 VND", "20+", "Concept công nghiệp xanh đậm cho quy mô, hiệu suất và bền vững.", "Kết cấu thép ôm khối cầu pha lê", "assets/custom-hoa-phat-concept.jpg", "Industrial excellence, projects và leadership", "QV-CUS-HPG", "Thép xước, pha lê"],
+  ["Concept Masan", "Từ 2.200.000 VND", "20+", "Concept đỏ vàng cho tăng trưởng, hệ sinh thái và thị trường tiêu dùng.", "Mạng liên kết vàng trên nền pha lê đỏ", "assets/custom-masan-concept.jpg", "Business growth, consumer brands và leadership", "QV-CUS-MSN", "Pha lê đỏ, kim loại mạ vàng"],
+  ["Concept TH true MILK", "Từ 1.800.000 VND", "30+", "Concept xanh trời và tre cho nông nghiệp sạch và sức khỏe cộng đồng.", "Mầm sống, ánh mặt trời và vật liệu tự nhiên", "assets/custom-th-concept.jpg", "Sustainability, agriculture và community impact", "QV-CUS-THM", "Acrylic xanh, tre, kim loại"],
+];
+
+plaqueCollection.forEach(([name, priceBand, timeline, price, moq, summary, story, image, fit, code, material, finish]) => {
+  productDiscovery[name] = { price: priceBand, timeline, collections: ["personalized", ...(priceBand === "over1500" ? ["premium"] : []), ...(timeline === "fast" ? ["fast"] : [])] };
+  productMessages[name] = "Trân trọng ghi nhận thành tích, hành trình cống hiến và dấu ấn đáng tự hào";
+  productSpecs[name] = { code, material, size: "3 cỡ theo chương trình", finish };
+  productDetails[name] = createPlaqueDetail(price, moq, summary, story, image, fit);
+});
+
+brandConceptCollection.forEach(([name, price, moq, summary, story, image, fit, code, material]) => {
+  productDiscovery[name] = { price: "over1500", timeline: "custom", collections: ["premium", "personalized"] };
+  productMessages[name] = "Tôn vinh thành tựu bằng một biểu tượng được phát triển riêng cho thương hiệu";
+  productSpecs[name] = { code, material, size: "Phát triển theo concept được duyệt", finish: "Phối vật liệu, màu và hoàn thiện theo bộ nhận diện" };
+  productDetails[name] = createBrandConceptDetail(price, moq, summary, story, image, fit);
+});
 
 let activeDetailProduct = "Cúp sao pha lê Milano";
 
