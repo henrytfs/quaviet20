@@ -18,6 +18,8 @@ const quoteButtons = document.querySelectorAll(".quote-product, .quote-trigger")
 const volumeSelect = document.querySelector("#volume-select");
 const startButtons = document.querySelectorAll(".start-program");
 const personalizeJumpButtons = document.querySelectorAll(".personalize-jump");
+const browseProductButtons = document.querySelectorAll(".browse-products");
+const categoryJumpLinks = document.querySelectorAll("[data-category-target]");
 const workspaceTabs = document.querySelectorAll(".workspace-tab");
 const workspacePanels = document.querySelectorAll(".workspace-panel");
 const budgetInput = document.querySelector("#budget");
@@ -858,6 +860,19 @@ quoteButtons.forEach((button) => {
 startButtons.forEach((button) => {
   button.addEventListener("click", () => {
     document.querySelector("#products").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
+
+browseProductButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    applyProductFilter("all");
+    document.querySelector(".category-showcase").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
+
+categoryJumpLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    applyProductFilter(link.dataset.categoryTarget);
   });
 });
 
